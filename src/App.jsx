@@ -27,22 +27,23 @@ function App() {
       default:
         return <Home />;
     }
-  }
+  };
 
   return (
-    <div className="d-flex-column min-vh-100 bg-light text-dark">
-      {/*HEADER */}
+    <div className="d-flex flex-column min-vh-100 bg-light text-dark">
+      {/* HEADER */}
       <CustomNavbar paginaActual={paginaActual} setPaginaActual={setPaginaActual} />
-      
-      {/*CONTENIDO PRINCIPAL */}
+
+      {/* CONTENIDO PRINCIPAL */}
       <main className="flex-grow-1 container py-4 animate__animated animate__fadeIn">
         {controlarPagina()}
       </main>
-      
-      {/*FOOTER Y ACCESOS DIRECTOS*/}
-      <CustomFooter SETPaginaActual={setPaginaActual} />
+
+      {/* FOOTER */}
+      <CustomFooter setPaginaActual={setPaginaActual} />
     </div>
   );
+
 }
 
 export default App
