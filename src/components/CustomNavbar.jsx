@@ -1,12 +1,20 @@
-// Barra de Navegación principal que sirve como encabezdo del Sitio web
+// Barra de Navegación principal que sirve como encabezado del Sitio web
 // Contiene enlaces a las diferentes secciones y funcionalidades del sitio
 
 // Importaciones necesarias para el funcionamiento de la barra de navegación
 import React from 'react';
 // Componentes de React Bootstrap para la barra de navegación
-import { Navbar, Nav, Container, Form, Button, Badge, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, Container, Form, Button, Badge, NavDropdown, InputGroup } from 'react-bootstrap';
 
-function CustomNavbar({paginaActual, setPaginaActual}) {
+function CustomNavbar({paginaActual, setPaginaActual, cantidadCarrito = 0}) {
+    const [busqueda, setBusqueda] = React.useState('');
+
+    const handleBuscar = (e) => {
+        e.preventDefault();
+        if(!busqueda.trim()) return;
+        //Pendiente
+    };
+
     return (
         //Regla W3C: usamos la etiqueta semantica <header>
         <header className="sticky-top shadow-sm">
@@ -23,7 +31,7 @@ function CustomNavbar({paginaActual, setPaginaActual}) {
                         <img 
                             src="/assets/logoMatiz.png" 
                             alt="Logo oficial Galeria MATIZ"
-                            height="60"
+                            height="70"
                             className="d-inline-block me-2" 
                         />
                     </Navbar.Brand>
@@ -54,13 +62,7 @@ function CustomNavbar({paginaActual, setPaginaActual}) {
                                     href="#exposiciones-actuales"
                                     onClick={() => setPaginaActual('exposiciones')}
                                 >
-                                    🖼️ Exposiciones actuales
-                                </NavDropdown.Item>
-                                <NavDropdown.Item
-                                    href="#proximas-exposiciones"
-                                    onClick={() => setPaginaActual('exposiciones')}
-                                >
-                                    ⏳ Próximas exposiciones
+                                    🖼️ Nuestras Exposiciones
                                 </NavDropdown.Item>
                             </NavDropdown>
 
@@ -134,35 +136,46 @@ function CustomNavbar({paginaActual, setPaginaActual}) {
                         </Nav>
 
                         {/*Sección Carrito de Compras y Buscador */}
-                        <div className="d-flex flex-column flex-lg-row align-items-start align-items-lg-center mt-3 mt-lg-0 gap-2">
+                        <div className="d-flex flex-column align-items-stretch align-items-lg-end gap-2 mt-3 mt-lg-0" 
+                            style={{ minWidth: '240px' }}
+                        >
 
                             {/*Carrito de Compras */}
                             <Button
                                 variant="light"
-                                className="position-relative rounded-pill me-lg-2 px-3 text-dark border border"
+                                className="position-relative rounded-pill px-3 text-dark border btn-sm align-self-end"
                                 aria-label="Ver carrito"
                                 onClick={() => setPaginaActual('arteshop')}
                             >
-                                🛒 <span className="d-lg-none ms-1">Carrito</span>
+                                <span aria-hidden="true">🛒</span> 
                                 <Badge
                                     bg="danger"
-                                    className="position-absolute top-0 start-100 translate-middle rounded-circle fs-7"
+                                    className="position-absolute top-0 start-100 translate-middle"
+                                    aria-hidden="true"
                                 >
-                                    0
+                                    {cantidadCarrito}
                                 </Badge>
                             </Button>
 
                             {/*Buscador */}
-                            <Form className="d-flex w-100" onSubmit={(e) => e.preventDefault()}>
-                                <Form.Control
-                                    type="search"
-                                    placeholder="Buscar..."
-                                    className="me-2 rounded-pill px-3"
-                                    aria-label="Buscar"
-                                />
-                                <Button variant="outline-primary" className="rounded-pill px-3" type="submit">
+                            <Form role="search" className="w-100" style={{ minWidth: '280px' }} onSubmit={handleBuscar}>
+                                <Form.Label htmlFor="buscador-sitio" visuallyHidden>
+                                    Buscar en el sitio
+                                </Form.Label>
+                                <InputGroup size='sm'>
+                                    <Form.Control
+                                        id="buscador-sitio"
+                                        type="search"
+                                        placeholder="Buscar obras, artistas..."
+                                        className="rounded-start-pill ps-3"
+                                        value={busqueda}
+                                        onChange={(e) => setBusqueda(e.target.value)}
+                                        autoComplete="off"
+                                    />
+                                <Button variant="outline-primary" className="rounded-pill px-3 btn-sm" type="submit">
                                     🔍
                                 </Button>
+                                </InputGroup>
                             </Form>
 
                         </div>
