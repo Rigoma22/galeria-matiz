@@ -30,7 +30,7 @@ function App() {
   };
 
   return (
-    <div className="d-flex flex-column min-vh-100 bg-light text-dark">
+    <div className="d-flex flex-column min-v-100 bg-light text-dark">
       {/* HEADER */}
       <CustomNavbar paginaActual={paginaActual} setPaginaActual={setPaginaActual} />
 
