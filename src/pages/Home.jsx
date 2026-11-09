@@ -25,7 +25,7 @@ function Home() {
         </video>
 
         <div className="position-relative d-flex flex-column align-items-center justify-content-center text-center h-100 px-3" style={{ zIndex: 1 }}>
-          <h1 className="display-4 fw-bold mb-3">Descubre, Aprende <br />y Disfruta con el Arte.</h1>
+          <h1 className="display-4 fw-bold text-light mb-3">Descubre, Aprende <br />y Disfruta con el Arte.</h1>
           <p className="lead mb-4 fw-medium text-light">Un espacio amigable y cercano para explorar, aprender y conectar con la cultura.</p>
           <div className="d-flex gap-3 flex-wrap justify-content-center">
             <Button variant="outline-light" size="lg" className="rounded-pill px-4 fw-semibold shadow-sm">

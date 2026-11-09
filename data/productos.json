@@ -1,0 +1,973 @@
+[
+  {
+    "sku": "MAT-ORI-001",
+    "nombre": "Horizontes de Bogotá",
+    "slug": "horizontes-de-bogota",
+    "categoria": "obras-originales",
+    "subcategoria": "pintura",
+    "tecnica": "oleo",
+    "autor": {
+      "nombre": "Valeria Montes Ríos"
+    },
+    "descripcion": "Paisaje urbano al atardecer, con contrastes cálidos y montañas andinas.",
+    "palabrasClave": [
+      "obras-originales",
+      "pintura",
+      "horizontes",
+      "de",
+      "bogota",
+      "oleo"
+    ],
+    "precio": 850000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 60,
+      "ancho": 80,
+      "profundidad": 2,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "lienzo",
+      "óleo"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-ORI-001.webp"
+    ],
+    "stock": 1,
+    "activo": true,
+    "destacado": true,
+    "obraUnica": true,
+    "certificadoAutenticidad": true,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-ORI-002",
+    "nombre": "Espiral de Encuentros",
+    "slug": "espiral-de-encuentros",
+    "categoria": "obras-originales",
+    "subcategoria": "escultura",
+    "tecnica": "bronce",
+    "autor": {
+      "nombre": "Tomás Arbeláez Londoño"
+    },
+    "descripcion": "Escultura abstracta de formas entrelazadas que simbolizan la comunidad.",
+    "palabrasClave": [
+      "obras-originales",
+      "escultura",
+      "espiral",
+      "de",
+      "encuentros",
+      "bronce"
+    ],
+    "precio": 1250000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 42,
+      "ancho": 24,
+      "profundidad": 20,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "bronce patinado",
+      "base de piedra"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-ORI-002.webp"
+    ],
+    "stock": 1,
+    "activo": true,
+    "destacado": true,
+    "obraUnica": true,
+    "certificadoAutenticidad": true,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-ORI-003",
+    "nombre": "Retrato en Silencio",
+    "slug": "retrato-en-silencio",
+    "categoria": "obras-originales",
+    "subcategoria": "dibujo",
+    "tecnica": "carboncillo",
+    "autor": {
+      "nombre": "Luciana Pardo Vélez"
+    },
+    "descripcion": "Estudio expresivo de perfil humano realizado en trazos de carboncillo.",
+    "palabrasClave": [
+      "obras-originales",
+      "dibujo",
+      "retrato",
+      "en",
+      "silencio",
+      "carboncillo"
+    ],
+    "precio": 420000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 50,
+      "ancho": 35,
+      "profundidad": null,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "papel artístico",
+      "carboncillo"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-ORI-003.webp"
+    ],
+    "stock": 1,
+    "activo": true,
+    "destacado": false,
+    "obraUnica": true,
+    "certificadoAutenticidad": true,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-ORI-004",
+    "nombre": "Reflejo de la Cordillera",
+    "slug": "reflejo-de-la-cordillera",
+    "categoria": "obras-originales",
+    "subcategoria": "fotografia",
+    "tecnica": "fotografia-bn",
+    "autor": {
+      "nombre": "Samuel Cárdenas Gil"
+    },
+    "descripcion": "Fotografía monocromática de montañas reflejadas en un lago.",
+    "palabrasClave": [
+      "obras-originales",
+      "fotografia",
+      "reflejo",
+      "de",
+      "la",
+      "cordillera",
+      "fotografia-bn"
+    ],
+    "precio": 580000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 40,
+      "ancho": 60,
+      "profundidad": null,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "papel fotográfico"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-ORI-004.webp"
+    ],
+    "stock": 1,
+    "activo": true,
+    "destacado": false,
+    "obraUnica": true,
+    "certificadoAutenticidad": true,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-ORI-005",
+    "nombre": "Rostros del Color",
+    "slug": "rostros-del-color",
+    "categoria": "obras-originales",
+    "subcategoria": "arte-digital",
+    "tecnica": "ilustracion-digital",
+    "autor": {
+      "nombre": "Marina Soler Acosta"
+    },
+    "descripcion": "Composición digital de retrato geométrico en colores vibrantes.",
+    "palabrasClave": [
+      "obras-originales",
+      "arte-digital",
+      "rostros",
+      "del",
+      "color",
+      "ilustracion-digital"
+    ],
+    "precio": 390000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 45,
+      "ancho": 60,
+      "profundidad": null,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "impresión artística montada"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-ORI-005.webp"
+    ],
+    "stock": 1,
+    "activo": true,
+    "destacado": false,
+    "obraUnica": true,
+    "certificadoAutenticidad": true,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-ORI-006",
+    "nombre": "Flor del Trópico",
+    "slug": "flor-del-tropico",
+    "categoria": "obras-originales",
+    "subcategoria": "pintura",
+    "tecnica": "acuarela",
+    "autor": {
+      "nombre": "Elena Rojas Serrano"
+    },
+    "descripcion": "Estudio botánico de flores tropicales en tonos cálidos.",
+    "palabrasClave": [
+      "obras-originales",
+      "pintura",
+      "flor",
+      "del",
+      "tropico",
+      "acuarela"
+    ],
+    "precio": 460000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 50,
+      "ancho": 35,
+      "profundidad": null,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "papel de algodón",
+      "acuarela"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-ORI-006.webp"
+    ],
+    "stock": 1,
+    "activo": true,
+    "destacado": false,
+    "obraUnica": true,
+    "certificadoAutenticidad": true,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-ORI-007",
+    "nombre": "Valle de los Colores",
+    "slug": "valle-de-los-colores",
+    "categoria": "obras-originales",
+    "subcategoria": "pintura",
+    "tecnica": "acrilico",
+    "autor": {
+      "nombre": "Mateo Lleras Duarte"
+    },
+    "descripcion": "Paisaje de montaña y lago con pinceladas expresivas.",
+    "palabrasClave": [
+      "obras-originales",
+      "pintura",
+      "valle",
+      "de",
+      "los",
+      "colores",
+      "acrilico"
+    ],
+    "precio": 720000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 50,
+      "ancho": 70,
+      "profundidad": 2,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "lienzo",
+      "acrílico"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-ORI-007.webp"
+    ],
+    "stock": 1,
+    "activo": true,
+    "destacado": true,
+    "obraUnica": true,
+    "certificadoAutenticidad": true,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-ORI-008",
+    "nombre": "Memoria de la Plaza",
+    "slug": "memoria-de-la-plaza",
+    "categoria": "obras-originales",
+    "subcategoria": "grabado",
+    "tecnica": "linograbado",
+    "autor": {
+      "nombre": "Inés Villamil Torres"
+    },
+    "descripcion": "Grabado de arquitectura tradicional inspirado en plazas colombianas.",
+    "palabrasClave": [
+      "obras-originales",
+      "grabado",
+      "memoria",
+      "de",
+      "la",
+      "plaza",
+      "linograbado"
+    ],
+    "precio": 340000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 30,
+      "ancho": 40,
+      "profundidad": null,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "papel algodón",
+      "tinta de grabado"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-ORI-008.webp"
+    ],
+    "stock": 1,
+    "activo": true,
+    "destacado": false,
+    "obraUnica": true,
+    "certificadoAutenticidad": true,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-REP-001",
+    "nombre": "Postales de Calles Vivas",
+    "slug": "postales-de-calles-vivas",
+    "categoria": "reproducciones",
+    "subcategoria": "postales",
+    "tecnica": "impresion-digital",
+    "autor": {
+      "nombre": "Valeria Montes Ríos"
+    },
+    "descripcion": "Juego de cuatro postales con paisajes urbanos coloridos.",
+    "palabrasClave": [
+      "reproducciones",
+      "postales",
+      "de",
+      "calles",
+      "vivas",
+      "impresion-digital"
+    ],
+    "precio": 28000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 15,
+      "ancho": 10,
+      "profundidad": null,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "cartulina artística"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-REP-001.webp"
+    ],
+    "stock": 25,
+    "activo": true,
+    "destacado": true,
+    "obraUnica": false,
+    "certificadoAutenticidad": false,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-REP-002",
+    "nombre": "Ciudad en Miniatura",
+    "slug": "ciudad-en-miniatura",
+    "categoria": "reproducciones",
+    "subcategoria": "iman-artistico",
+    "tecnica": "impresion-digital",
+    "autor": {
+      "nombre": "Valeria Montes Ríos"
+    },
+    "descripcion": "Reproducción en imán decorativo de un paisaje urbano de MATIZ.",
+    "palabrasClave": [
+      "reproducciones",
+      "iman-artistico",
+      "ciudad",
+      "en",
+      "miniatura",
+      "impresion-digital"
+    ],
+    "precio": 18000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 7,
+      "ancho": 7,
+      "profundidad": 0.4,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "imán",
+      "lámina impresa"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-REP-002.webp"
+    ],
+    "stock": 40,
+    "activo": true,
+    "destacado": false,
+    "obraUnica": false,
+    "certificadoAutenticidad": false,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-REP-003",
+    "nombre": "Rompecabezas Cordillera",
+    "slug": "rompecabezas-cordillera",
+    "categoria": "reproducciones",
+    "subcategoria": "rompecabezas",
+    "tecnica": "impresion-digital",
+    "autor": {
+      "nombre": "Mateo Lleras Duarte"
+    },
+    "descripcion": "Rompecabezas ilustrado de un paisaje montañoso multicolor.",
+    "palabrasClave": [
+      "reproducciones",
+      "rompecabezas",
+      "cordillera",
+      "impresion-digital"
+    ],
+    "precio": 65000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 40,
+      "ancho": 30,
+      "profundidad": null,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "cartón rígido"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-REP-003.webp"
+    ],
+    "stock": 14,
+    "activo": true,
+    "destacado": false,
+    "obraUnica": false,
+    "certificadoAutenticidad": false,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-REP-004",
+    "nombre": "Posavasos Geometría Viva",
+    "slug": "posavasos-geometria-viva",
+    "categoria": "reproducciones",
+    "subcategoria": "posavasos",
+    "tecnica": "impresion-digital",
+    "autor": {
+      "nombre": "Marina Soler Acosta"
+    },
+    "descripcion": "Set de posavasos con reproducciones de motivos geométricos.",
+    "palabrasClave": [
+      "reproducciones",
+      "posavasos",
+      "geometria",
+      "viva",
+      "impresion-digital"
+    ],
+    "precio": 38000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 10,
+      "ancho": 10,
+      "profundidad": 0.5,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "corcho",
+      "superficie impresa"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-REP-004.webp"
+    ],
+    "stock": 18,
+    "activo": true,
+    "destacado": false,
+    "obraUnica": false,
+    "certificadoAutenticidad": false,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-REP-005",
+    "nombre": "Calendario Paisajes MATIZ",
+    "slug": "calendario-paisajes-matiz",
+    "categoria": "reproducciones",
+    "subcategoria": "calendario",
+    "tecnica": "impresion-digital",
+    "autor": {
+      "nombre": "Samuel Cárdenas Gil"
+    },
+    "descripcion": "Calendario de escritorio con ilustraciones de paisajes.",
+    "palabrasClave": [
+      "reproducciones",
+      "calendario",
+      "paisajes",
+      "matiz",
+      "impresion-digital"
+    ],
+    "precio": 42000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 21,
+      "ancho": 15,
+      "profundidad": null,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "papel",
+      "cartón"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-REP-005.webp"
+    ],
+    "stock": 20,
+    "activo": true,
+    "destacado": false,
+    "obraUnica": false,
+    "certificadoAutenticidad": false,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-REP-006",
+    "nombre": "Bitácora Floral Ilustrada",
+    "slug": "bitacora-floral-ilustrada",
+    "categoria": "reproducciones",
+    "subcategoria": "lamina-artistica",
+    "tecnica": "impresion-digital",
+    "autor": {
+      "nombre": "Elena Rojas Serrano"
+    },
+    "descripcion": "Lámina botánica reproducida en papel artístico para enmarcar.",
+    "palabrasClave": [
+      "reproducciones",
+      "lamina-artistica",
+      "bitacora",
+      "floral",
+      "ilustrada",
+      "impresion-digital"
+    ],
+    "precio": 55000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 21,
+      "ancho": 30,
+      "profundidad": null,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "papel artístico"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-REP-006.webp"
+    ],
+    "stock": 12,
+    "activo": true,
+    "destacado": false,
+    "obraUnica": false,
+    "certificadoAutenticidad": false,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-SOU-001",
+    "nombre": "Taza Rostros del Color",
+    "slug": "taza-rostros-del-color",
+    "categoria": "souvenirs",
+    "subcategoria": "tazas",
+    "tecnica": "ceramica",
+    "autor": {
+      "nombre": "Marina Soler Acosta"
+    },
+    "descripcion": "Taza de cerámica con diseño de retrato abstracto.",
+    "palabrasClave": [
+      "souvenirs",
+      "tazas",
+      "taza",
+      "rostros",
+      "del",
+      "color",
+      "ceramica"
+    ],
+    "precio": 35000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 10,
+      "ancho": 9,
+      "profundidad": 9,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "cerámica"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-SOU-001.webp"
+    ],
+    "stock": 24,
+    "activo": true,
+    "destacado": true,
+    "obraUnica": false,
+    "certificadoAutenticidad": false,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-SOU-002",
+    "nombre": "Libreta Hojas de Color",
+    "slug": "libreta-hojas-de-color",
+    "categoria": "souvenirs",
+    "subcategoria": "libretas",
+    "tecnica": "impresion-digital",
+    "autor": {
+      "nombre": "Elena Rojas Serrano"
+    },
+    "descripcion": "Libreta anillada con portada de inspiración botánica.",
+    "palabrasClave": [
+      "souvenirs",
+      "libretas",
+      "libreta",
+      "hojas",
+      "de",
+      "color",
+      "impresion-digital"
+    ],
+    "precio": 32000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 21,
+      "ancho": 15,
+      "profundidad": 2,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "papel",
+      "cartón"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-SOU-002.webp"
+    ],
+    "stock": 30,
+    "activo": true,
+    "destacado": false,
+    "obraUnica": false,
+    "certificadoAutenticidad": false,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-SOU-003",
+    "nombre": "Bolsa Colibrí MATIZ",
+    "slug": "bolsa-colibri-matiz",
+    "categoria": "souvenirs",
+    "subcategoria": "bolsas-de-tela",
+    "tecnica": "serigrafia",
+    "autor": {
+      "nombre": "Inés Villamil Torres"
+    },
+    "descripcion": "Bolsa reutilizable de algodón con ilustración de colibrí.",
+    "palabrasClave": [
+      "souvenirs",
+      "bolsas-de-tela",
+      "bolsa",
+      "colibri",
+      "matiz",
+      "serigrafia"
+    ],
+    "precio": 48000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 40,
+      "ancho": 35,
+      "profundidad": null,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "algodón"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-SOU-003.webp"
+    ],
+    "stock": 16,
+    "activo": true,
+    "destacado": false,
+    "obraUnica": false,
+    "certificadoAutenticidad": false,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-SOU-004",
+    "nombre": "Cojín Jardín Abstracto",
+    "slug": "cojin-jardin-abstracto",
+    "categoria": "souvenirs",
+    "subcategoria": "decoracion",
+    "tecnica": "impresion-textil",
+    "autor": {
+      "nombre": "Marina Soler Acosta"
+    },
+    "descripcion": "Cojín decorativo con motivos de hojas en colores intensos.",
+    "palabrasClave": [
+      "souvenirs",
+      "decoracion",
+      "cojin",
+      "jardin",
+      "abstracto",
+      "impresion-textil"
+    ],
+    "precio": 79000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 40,
+      "ancho": 40,
+      "profundidad": 12,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "tela",
+      "relleno sintético"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-SOU-004.webp"
+    ],
+    "stock": 10,
+    "activo": true,
+    "destacado": false,
+    "obraUnica": false,
+    "certificadoAutenticidad": false,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-SOU-005",
+    "nombre": "Bufanda Atardecer Andino",
+    "slug": "bufanda-atardecer-andino",
+    "categoria": "souvenirs",
+    "subcategoria": "textiles",
+    "tecnica": "tejido",
+    "autor": {
+      "nombre": "Valeria Montes Ríos"
+    },
+    "descripcion": "Bufanda tejida con una paleta inspirada en atardeceres andinos.",
+    "palabrasClave": [
+      "souvenirs",
+      "textiles",
+      "bufanda",
+      "atardecer",
+      "andino",
+      "tejido"
+    ],
+    "precio": 89000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 170,
+      "ancho": 30,
+      "profundidad": null,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "fibras textiles"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-SOU-005.webp"
+    ],
+    "stock": 8,
+    "activo": true,
+    "destacado": false,
+    "obraUnica": false,
+    "certificadoAutenticidad": false,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-SOU-006",
+    "nombre": "Botella Montañas MATIZ",
+    "slug": "botella-montanas-matiz",
+    "categoria": "souvenirs",
+    "subcategoria": "botellas",
+    "tecnica": "impresion-digital",
+    "autor": {
+      "nombre": "Mateo Lleras Duarte"
+    },
+    "descripcion": "Botella reutilizable con diseño de paisaje de montaña.",
+    "palabrasClave": [
+      "souvenirs",
+      "botellas",
+      "botella",
+      "montanas",
+      "matiz",
+      "impresion-digital"
+    ],
+    "precio": 59000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 25,
+      "ancho": 7,
+      "profundidad": 7,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "acero inoxidable"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-SOU-006.webp"
+    ],
+    "stock": 22,
+    "activo": true,
+    "destacado": false,
+    "obraUnica": false,
+    "certificadoAutenticidad": false,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-OTR-001",
+    "nombre": "Libro Miradas del Arte",
+    "slug": "libro-miradas-del-arte",
+    "categoria": "otros-productos",
+    "subcategoria": "libros-de-arte",
+    "tecnica": null,
+    "autor": {
+      "nombre": "Colectivo Editorial MATIZ"
+    },
+    "descripcion": "Libro ilustrado introductorio a la apreciación artística.",
+    "palabrasClave": [
+      "otros-productos",
+      "libros-de-arte",
+      "libro",
+      "miradas",
+      "del",
+      "arte"
+    ],
+    "precio": 95000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 28,
+      "ancho": 22,
+      "profundidad": 3,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "papel",
+      "tapa dura"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-OTR-001.webp"
+    ],
+    "stock": 15,
+    "activo": true,
+    "destacado": true,
+    "obraUnica": false,
+    "certificadoAutenticidad": false,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-OTR-002",
+    "nombre": "Kit Mi Primer Paisaje",
+    "slug": "kit-mi-primer-paisaje",
+    "categoria": "otros-productos",
+    "subcategoria": "kits-creativos",
+    "tecnica": null,
+    "autor": {
+      "nombre": "Equipo Educativo MATIZ"
+    },
+    "descripcion": "Kit de iniciación con pinturas, pinceles y soporte para practicar.",
+    "palabrasClave": [
+      "otros-productos",
+      "kits-creativos",
+      "kit",
+      "mi",
+      "primer",
+      "paisaje"
+    ],
+    "precio": 115000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 30,
+      "ancho": 25,
+      "profundidad": 6,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "cartón",
+      "pinturas",
+      "pinceles"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-OTR-002.webp"
+    ],
+    "stock": 12,
+    "activo": true,
+    "destacado": false,
+    "obraUnica": false,
+    "certificadoAutenticidad": false,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-OTR-003",
+    "nombre": "Estuche de Acuarelas",
+    "slug": "estuche-de-acuarelas",
+    "categoria": "otros-productos",
+    "subcategoria": "materiales-artisticos",
+    "tecnica": null,
+    "autor": null,
+    "descripcion": "Estuche compacto de acuarelas con pinceles para estudiantes.",
+    "palabrasClave": [
+      "otros-productos",
+      "materiales-artisticos",
+      "estuche",
+      "de",
+      "acuarelas"
+    ],
+    "precio": 68000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 20,
+      "ancho": 10,
+      "profundidad": 2,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "pigmentos",
+      "estuche metálico"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-OTR-003.webp"
+    ],
+    "stock": 18,
+    "activo": true,
+    "destacado": false,
+    "obraUnica": false,
+    "certificadoAutenticidad": false,
+    "datosFicticios": true
+  },
+  {
+    "sku": "MAT-OTR-004",
+    "nombre": "Lápices de Bocetación",
+    "slug": "lapices-de-bocetacion",
+    "categoria": "otros-productos",
+    "subcategoria": "materiales-artisticos",
+    "tecnica": null,
+    "autor": null,
+    "descripcion": "Juego de lápices para dibujo y ejercicios de bocetación.",
+    "palabrasClave": [
+      "otros-productos",
+      "materiales-artisticos",
+      "lapices",
+      "de",
+      "bocetacion"
+    ],
+    "precio": 29000,
+    "moneda": "COP",
+    "dimensiones": {
+      "alto": 19,
+      "ancho": 7,
+      "profundidad": 7,
+      "unidad": "cm"
+    },
+    "materiales": [
+      "grafito",
+      "madera"
+    ],
+    "imagenes": [
+      "/assets/productos/MAT-OTR-004.webp"
+    ],
+    "stock": 35,
+    "activo": true,
+    "destacado": false,
+    "obraUnica": false,
+    "certificadoAutenticidad": false,
+    "datosFicticios": true
+  }
+]

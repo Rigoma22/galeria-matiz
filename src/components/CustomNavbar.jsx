@@ -12,13 +12,64 @@ function CustomNavbar({paginaActual, setPaginaActual, cantidadCarrito = 0}) {
     const handleBuscar = (e) => {
         e.preventDefault();
         if(!busqueda.trim()) return;
-        //Pendiente
+        //Pendiente Código Sistema de Búsqueda
     };
 
     return (
         //Regla W3C: usamos la etiqueta semantica <header>
-        <header className="sticky-top shadow-sm">
-            <Navbar bg="white" expand="lg" className="border-bottom py-3">
+        <header className="sticky-top shadow-sm bg-white">
+            
+            {/*Sección Carrito de Compras y Buscador */}
+            <div className="bg-white border-bottom">
+            <Container>
+                
+                <div className="d-flex justify-content-end align-items-center gap-3 py-2">
+
+                    {/*Buscador */}
+                    <Form 
+                    role="search" onSubmit={handleBuscar} className="buscador-global">
+                        <Form.Label htmlFor="buscador-sitio" visuallyHidden>
+                            Buscar en el sitio
+                        </Form.Label>
+
+                        <InputGroup size='sm'>
+                        <Form.Control
+                            id="buscador-sitio"
+                            type="search"
+                            placeholder="Buscar obras, artistas..."
+                            className="rounded-start-pill ps-3"
+                            value={busqueda}
+                            onChange={(e) => setBusqueda(e.target.value)}
+                            autoComplete="off"
+                        />
+                        <Button variant="outline-primary" className="rounded-pill px-3" type="submit" aria-label="Buscar">
+                            🔍
+                        </Button>
+                        </InputGroup>
+                    </Form>
+                    
+                    {/*Carrito de Compras */}
+                    <Button
+                    variant="light"
+                    className="position-relative rounded-pill px-3 text-dark border btn-sm"
+                    aria-label={`Ver carrito, ${cantidadCarrito} productos`}
+                    onClick={() => setPaginaActual('arteshop')}
+                    >
+                        <span aria-hidden="true">🛒</span> 
+                        <Badge
+                        bg="danger"
+                        className="position-absolute top-0 start-100 translate-middle"
+                        aria-hidden="true"
+                        >
+                            {cantidadCarrito}
+                            </Badge>
+                    </Button>
+
+                </div>
+            </Container>
+            </div>
+
+            <Navbar bg="light" expand="lg" className="border-bottom py-2">
                 <Container>
 
                     {/*Marca y Logo del sitio */}
@@ -134,51 +185,6 @@ function CustomNavbar({paginaActual, setPaginaActual, cantidadCarrito = 0}) {
                             </NavDropdown>
 
                         </Nav>
-
-                        {/*Sección Carrito de Compras y Buscador */}
-                        <div className="d-flex flex-column align-items-stretch align-items-lg-end gap-2 mt-3 mt-lg-0" 
-                            style={{ minWidth: '240px' }}
-                        >
-
-                            {/*Carrito de Compras */}
-                            <Button
-                                variant="light"
-                                className="position-relative rounded-pill px-3 text-dark border btn-sm align-self-end"
-                                aria-label="Ver carrito"
-                                onClick={() => setPaginaActual('arteshop')}
-                            >
-                                <span aria-hidden="true">🛒</span> 
-                                <Badge
-                                    bg="danger"
-                                    className="position-absolute top-0 start-100 translate-middle"
-                                    aria-hidden="true"
-                                >
-                                    {cantidadCarrito}
-                                </Badge>
-                            </Button>
-
-                            {/*Buscador */}
-                            <Form role="search" className="w-100" style={{ minWidth: '280px' }} onSubmit={handleBuscar}>
-                                <Form.Label htmlFor="buscador-sitio" visuallyHidden>
-                                    Buscar en el sitio
-                                </Form.Label>
-                                <InputGroup size='sm'>
-                                    <Form.Control
-                                        id="buscador-sitio"
-                                        type="search"
-                                        placeholder="Buscar obras, artistas..."
-                                        className="rounded-start-pill ps-3"
-                                        value={busqueda}
-                                        onChange={(e) => setBusqueda(e.target.value)}
-                                        autoComplete="off"
-                                    />
-                                <Button variant="outline-primary" className="rounded-pill px-3 btn-sm" type="submit">
-                                    🔍
-                                </Button>
-                                </InputGroup>
-                            </Form>
-
-                        </div>
 
                     </Navbar.Collapse>
                 </Container>

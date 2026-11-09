@@ -1,0 +1,19 @@
+
+services:
+  mongodb:
+    image: mongo:7
+    container_name: tienda-matiz-mongodb
+    restart: unless-stopped
+
+    ports:
+      - "127.0.0.1:27017:27017"
+
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: matiz_admin
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
+
+    volumes:
+      - matiz_mongodb_data:/data/db
+
+volumes:
+  matiz_mongodb_data:
