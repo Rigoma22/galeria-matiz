@@ -12,31 +12,51 @@ function CustomFooter({setPaginaActual}) {
 
   return (
     //Regla W3C: usamos la etiqueta semantica <footer> con fondo oscuro para contraste
-    <footer className="bg-dark text-light pt-5 pb-3 border-top border-secondary mt-auto">
+    <footer className="bg-dark text-light pt-4 pb-3 mt-auto">
       <Container>
+
+        {/* Encabezado General de la Galería */}
+        <Row className="mb-3">
+          <Col>
+            <h2 className="text-primary fw-bold fs-3 mb-0">GALERÍA MATIZ</h2>
+            <p className="fs-6 fw-medium text-white mb-2 fst-italic">Descubre, aprende y disfruta con el arte.</p>
+          </Col>
+        </Row>
 
         <Row className="gy-4">
           
           {/* Bloque con información de la Galería */}
-          <Col lg={4} md={6}>
-            <h5 className="text-primary fw-bold mb-1 fs-4">GALERÍA MATIZ</h5>
-            <p className="small text-white fw-medium mb-2 italic">Descubre, aprende y disfruta con el arte.</p>
+          <Col lg={3} md={6}>
+            <h3 className="fs-6 fw-bold text-uppercase mb-2">Información</h3>
+            
             <address className="small text-white-50 mb-0">
-              <strong>Dirección:</strong>Av. Calle 26 # 70-40, Bogotá, Colombia<br />
-              <strong>Teléfono:</strong>+57 (601) 234-5678<br />
-              <strong>Horario:</strong>Mar-Sáb 10:00 AM - 7:00 PM<br />
-              <span>Dom y Fest: 11:00 AM - 5:00 PM</span>
+              <p className="mb-0">
+                <strong>Dirección:</strong> Av. Calle 26 # 70-40,
+              </p>
+              <p className="mb-0">
+                Bogotá, Colombia
+              </p>
+              <p className="mb-0">
+                <strong>Teléfono:</strong> +57 (601) 234-5678
+              </p>
+              <p className="mb-0">
+                <strong>Horario:</strong> Mar-Sáb 10am - 7pm
+              </p>
+              <p className="mb-0">
+                Dom y Fest: 11am - 5pm
+              </p>
+              
             </address>
           </Col>
 
           {/* Bloque con enlaces rápidos */}
           <Col lg={2} md={6}>
-            <h5 className="fs-6 fw-bold text-uppercase mb-3">Conócenos</h5>
+            <h3 className="fs-6 fw-bold text-uppercase mb-2">Conócenos</h3>
             <ul className="list-unstyled small">
               <li>
                 <a href="#sobre-nosotros" 
                 onClick={() => setPaginaActual('home')}
-                className="text-secondary text-decoration-none hover-link"
+                className="text-white-50 text-decoration-none hover-link"
                 >
                   Sobre Nosotros
                 </a>
@@ -44,7 +64,7 @@ function CustomFooter({setPaginaActual}) {
               <li>
                 <a href="#visitanos" 
                 onClick={() => setPaginaActual('visitanos')}
-                className="text-secondary text-decoration-none hover-link"
+                className="text-white-50 text-decoration-none hover-link"
                 >
                   Planifica tu Visita
                 </a>
@@ -52,7 +72,7 @@ function CustomFooter({setPaginaActual}) {
               <li>
                 <a href="#arteshop" 
                 onClick={() => setPaginaActual('arteshop')}
-                className="text-secondary text-decoration-none hover-link"
+                className="text-white-50 text-decoration-none hover-link"
                 >
                   Tienda de Arte
                 </a>
@@ -61,13 +81,13 @@ function CustomFooter({setPaginaActual}) {
           </Col>
 
           {/* Bloque con enlaces de ayuda e información Legal */}
-          <Col lg={2} md={6}>
-            <h5 className="fs-6 fw-bold text-uppercase mb-3">Ayuda & Soporte</h5>
+          <Col lg={3} md={6}>
+            <h3 className="fs-6 fw-bold text-uppercase mb-2">Ayuda y Soporte</h3>
             <ul className="list-unstyled small">
               <li>
                 <a href="#pqrs" 
                 onClick={() => setPaginaActual('visitanos')}
-                className="text-secondary text-decoration-none hover-link"
+                className="text-white-50 text-decoration-none hover-link"
                 >
                   Radicar PQRS
                 </a>
@@ -75,7 +95,7 @@ function CustomFooter({setPaginaActual}) {
               <li>
                 <a href="#cookies" 
                 onClick={() => setPaginaActual('home')}
-                className="text-secondary text-decoration-none hover-link"
+                className="text-white-50 text-decoration-none hover-link"
                 >
                   Política de Cookies
                 </a>
@@ -83,7 +103,7 @@ function CustomFooter({setPaginaActual}) {
               <li>
                 <a href="#terminos" 
                 onClick={() => setPaginaActual('home')}
-                className="text-secondary text-decoration-none hover-link"
+                className="text-white-50 text-decoration-none hover-link"
                 >
                   Términos y Condiciones
                 </a>
@@ -93,80 +113,86 @@ function CustomFooter({setPaginaActual}) {
 
           {/* Bloque con Boletín y comunidad */}
           <Col lg={4} md={6}>
-            <h5 className="fs-6 fw-bold text-uppercase mb-3">Únete a Nuestra Comunidad</h5>
-            <p className="small text-secondary mb-3">Recibe artículos didácticos y alertas de nuevas exposiciones.</p>
+            <h3 className="fs-6 fw-bold text-uppercase mb-2">Nuestra Comunidad</h3>
+            <p className="small text-white-50 mb-3">Recibe artículos didácticos y alertas de nuevas exposiciones.</p>
             <form className="d-flex mb-3" onSubmit={(e) => e.preventDefault()}>
+                <Form.Label htmlFor="correo-boletin" visuallyHidden>
+                  Correo electrónico para suscripción
+                </Form.Label>
                 <Form.Control 
+                  id="correo-boletin"
                   type="email" 
                   placeholder="Tu correo electrónico..."
-                  className="me-2 rounded-pill bg-secondary text-white border-0 px-3"
+                  className="me-1 bg-gray text-dark border-0 px-3"
                   required
                 />
-              <button variant="primary" className="rounded-pill px-3" type="submit">
+              <button variant="primary" size="sm" type="submit" className="rounded-pill px-3 fw-medium btn-unirme">
                 Unirme
               </button>
             </form>
-            {/* Enlaces a redes sociales */}
-            <div className="d-flex justify-content-center justify-content-md-start gap-3 fs-5 mt-2">
+            
+          </Col>
+
+        </Row>
+
+        <hr className="border-secondary my-2" />
+        
+        {/* LÍNEA DE CIERRE: COPYRIGHT Y FECHA DE ACTUALIZACIÓN */}
+        <Row className="align-items-center gy-3">
+          <Col lg={8} md={7} className="text-center text-md-start">
+          <p className="small text-white-50 mb-0">
+            &copy; {currentYear}{' '}<strong>Matiz Galería</strong>. Todos los derechos reservados.
+          </p>
+          </Col>
+
+          {/* Enlaces a redes sociales */}
+          <Col lg={4} md={5}>
+            <nav 
+              aria-label="Redes sociales Galería Matiz"
+              className="d-flex justify-content-center justify-content-md-end gap-3"
+            >
               <a 
                 href="https://wa.me" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center"
-                style={{ width: '36px', height: '36px' }}
+                className="btn btn-outline-light btn-sm rounded-circle footer-social-icon"
                 aria-label="Escríbenos por WhatsApp"
               >
-                <i className="bi bi-whatsapp text-white"></i>
+                <i className="bi bi-whatsapp" aria-hidden="true"></i>
               </a>
 
               <a 
                 href="https://instagram.com" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center"
-                style={{ width: '36px', height: '36px' }}
+                className="btn btn-outline-light btn-sm rounded-circle footer-social-icon"
                 aria-label="Síguenos en Instagram"
               >
-                <i className="bi bi-instagram text-white"></i>
+                <i className="bi bi-instagram" aria-hidden="true"></i>
               </a>
 
               <a 
                 href="https://facebook.com" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center"
-                style={{ width: '36px', height: '36px' }}
+                className="btn btn-outline-light btn-sm rounded-circle footer-social-icon"
                 aria-label="Síguenos en Facebook"
               >
-                <i className="bi bi-facebook text-white"></i>
+                <i className="bi bi-facebook" aria-hidden="true"></i>
               </a>
               
               <a 
-                href="https://linkedin.com" 
+                href="https://tiktok.com" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center"
-                style={{ width: '36px', height: '36px' }}
-                aria-label="Síguenos en LinkedIn"
+                className="btn btn-outline-light btn-sm rounded-circle footer-social-icon"
+                aria-label="Síguenos en TikTok"
               >
-                <i className="bi bi-linkedin text-white"></i>
+                <i className="bi bi-tiktok" aria-hidden="true"></i>
               </a>
-              
-            </div>
+            </nav>
           </Col>
-
         </Row>
-
-          {/* LÍNEA DE CIERRE: COPYRIGHT Y FECHA DE ACTUALIZACIÓN */}
-          <hr className="border-secondary my-2" />
-          <Row className="small text-secondary align-items-center">
-            <Col md={6} className="text-center text-md-start mb-2 md-md-0">
-            &copy; {currentYear} <strong>Matiz Galería</strong>. Todos los derechos reservados.
-            </Col>
-            <Col md={6} className="text-center text-md-end text-muted">
-            Versión Académica 1.1 | Última actualización: Octubre {currentYear}
-            </Col>
-          </Row>
 
       </Container>
     </footer>
