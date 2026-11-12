@@ -5,9 +5,12 @@
 import React from 'react';
 // Componentes de React Bootstrap para la barra de navegación
 import { Navbar, Nav, Container, Form, Button, Badge, NavDropdown, InputGroup } from 'react-bootstrap';
+//importación del hook useCarrito para acceder al estado del carrito
+import { useCarrito } from '../context/CarritoContext';
 
-function CustomNavbar({paginaActual, setPaginaActual, cantidadCarrito = 0}) {
+function CustomNavbar({paginaActual, setPaginaActual}) {
     const [busqueda, setBusqueda] = React.useState('');
+    const { cantidadCarrito } = useCarrito();
 
     const handleBuscar = (e) => {
         e.preventDefault();
@@ -52,8 +55,8 @@ function CustomNavbar({paginaActual, setPaginaActual, cantidadCarrito = 0}) {
                     <Button
                     variant="light"
                     className="position-relative rounded-pill px-3 text-dark border btn-sm"
-                    aria-label={`Ver carrito, ${cantidadCarrito} productos`}
-                    onClick={() => setPaginaActual('arteshop')}
+                    aria-label={`Ver carrito, ${cantidadCarrito} unidades seleccionadas`}
+                    onClick={() => setPaginaActual('carrito')}
                     >
                         <span aria-hidden="true">🛒</span> 
                         <Badge

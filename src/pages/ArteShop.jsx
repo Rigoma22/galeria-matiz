@@ -3,14 +3,15 @@ import { useEffect, useState } from 'react';
 import {Row, Col, Card, Form, Button, Badge, Spinner, Alert, Pagination, Modal} from 'react-bootstrap';
 
 import { obtenerProductos, obtenerProductoPorId } from '../services/productoService';
+import { useCarrito } from '../context/CarritoContext';
 
 const LIMITE = 9;
 
 const CATEGORIAS = [
-  { valor: 'originales', nombre: 'Obras originales' },
+  { valor: 'obras-originales', nombre: 'Obras originales' },
   { valor: 'reproducciones', nombre: 'Reproducciones' },
   { valor: 'souvenirs', nombre: 'Souvenirs' },
-  { valor: 'otros', nombre: 'Otros productos' }
+  { valor: 'otros-productos', nombre: 'Otros productos' }
 ];
 
 const formatoCOP = (valor) => {
@@ -32,6 +33,22 @@ function ArteShop() {
   const [pagina, setPagina] = useState(1);
   const [totalProductos, setTotalProductos] = useState(0);
   const [totalPaginas, setTotalPaginas] = useState(0);
+  const { agregarItem } = useCarrito();
+
+  //Función para agregar un producto al carrito
+  const agregarProducto = (producto => {
+    if (producto.stock < 1) return;
+
+    agregarItem({
+      clave: `producto:${producto._id}`,
+      tipo: 'producto',
+      referenciaId: producto._id,
+      nombre: producto.nombre,
+      precioUnitario: producto.precio,
+      cantidad: 1,
+      imagen: producto.imagenes?.[0] || ''
+    });
+  });
 
   // Filtros editables
   const [textoBusqueda, setTextoBusqueda] = useState('');
@@ -357,6 +374,17 @@ function ArteShop() {
                         }
                       >
                         Ver detalles
+                      </Button>
+
+                      <Button 
+                        variant="primary"
+                        className="mt-2"
+                        disabled={producto.stock < 1}
+                        onClick={() =>
+                          agregarProducto(producto)
+                        }
+                      >
+                        Agregar al carrito
                       </Button>
 
                     </Card.Body>
