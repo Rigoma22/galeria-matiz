@@ -2,6 +2,8 @@ import { useState } from 'react'
 
 import CustomNavbar from './components/CustomNavbar';
 import CustomFooter from './components/CustomFooter';
+import { CarritoProvider } from './context/CarritoContext';
+import Carrito from './pages/Carrito';
 
 import Home from './pages/Home';
 import Visitanos from './pages/Visitanos';
@@ -24,6 +26,8 @@ function App() {
         return <ArteShop />;
       case 'cursos':
         return <Cursos />;
+      case 'carrito':
+        return <Carrito />;
       default:
         return <Home />;
     }
@@ -46,4 +50,10 @@ function App() {
 
 }
 
-export default App
+export default function AppConCarrito() {
+  return (
+    <CarritoProvider>
+      <App />
+    </CarritoProvider>
+  );
+}
