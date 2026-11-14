@@ -2,40 +2,23 @@ export const estadoInicialCarrito = {
   items: []
 };
 
-export const TIPOS_ITEM = [
-  'producto',
-  'curso',
-  'entrada',
-  'reserva_grupal'
-];
-
 export function carritoReducer(estado, accion) {
   switch (accion.type) {
 
-    case 'AGREGAR_ITEM': {
+    case 'GUARDAR_ITEM': {
       const nuevo = accion.payload;
 
-      const existente = estado.items.find(
+      const existe = estado.items.some(
         item => item.clave === nuevo.clave
       );
 
-      if (existente) {
-        return {
-          ...estado,
-          items: estado.items.map(item =>
-            item.clave === nuevo.clave
-              ? {
-                  ...item,
-                  cantidad: item.cantidad + nuevo.cantidad
-                }
-              : item
-          )
-        };
-      }
-
       return {
         ...estado,
-        items: [...estado.items, nuevo]
+        items: existe
+          ? estado.items.map(item =>
+              item.clave === nuevo.clave ? nuevo : item
+            )
+          : [...estado.items, nuevo]
       };
     }
 
@@ -44,19 +27,6 @@ export function carritoReducer(estado, accion) {
         ...estado,
         items: estado.items.filter(
           item => item.clave !== accion.payload
-        )
-      };
-
-    case 'ACTUALIZAR_CANTIDAD':
-      return {
-        ...estado,
-        items: estado.items.map(item =>
-          item.clave === accion.payload.clave
-            ? {
-                ...item,
-                cantidad: accion.payload.cantidad
-              }
-            : item
         )
       };
 

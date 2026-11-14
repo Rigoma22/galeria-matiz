@@ -33,22 +33,18 @@ function ArteShop() {
   const [pagina, setPagina] = useState(1);
   const [totalProductos, setTotalProductos] = useState(0);
   const [totalPaginas, setTotalPaginas] = useState(0);
-  const { agregarItem } = useCarrito();
-
+  
   //Función para agregar un producto al carrito
-  const agregarProducto = (producto => {
-    if (producto.stock < 1) return;
-
-    agregarItem({
-      clave: `producto:${producto._id}`,
-      tipo: 'producto',
-      referenciaId: producto._id,
-      nombre: producto.nombre,
-      precioUnitario: producto.precio,
-      cantidad: 1,
-      imagen: producto.imagenes?.[0] || ''
-    });
-  });
+  const { agregarProducto: agregarAlCarrito } = useCarrito();
+  
+  const agregarProducto = (producto) => {
+    try {
+      agregarAlCarrito(producto);
+    } catch (error) {
+      console.error('Error al agregar producto:', error);
+      window.alert(error.message);
+    }
+  };
 
   // Filtros editables
   const [textoBusqueda, setTextoBusqueda] = useState('');
