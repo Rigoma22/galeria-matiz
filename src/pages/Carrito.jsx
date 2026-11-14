@@ -61,7 +61,7 @@ function Carrito() {
 
                   <strong>
                     {moneda(
-                      item.precioUnitario * item.cantidad
+                      item.subtotal
                     )}
                   </strong>
                 </div>
