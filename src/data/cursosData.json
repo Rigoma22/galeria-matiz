@@ -7,11 +7,24 @@
     "descripcion": "Aprende los fundamentos de la pintura al óleo desde cero. Descubre cómo mezclar colores, utilizar pinceles y aplicar diferentes técnicas para crear tus propias obras de arte.",
     "duracion": 40,
     "docente": "Laura Martínez",
-    "tipo": "curso",
+    "tipo": "Curso",
     "categoria": "pintura",
     "modalidad": "presencial",
-    "nivel": "facil",
-    "precio": 350000
+    "nivel": "Fácil",
+    "precio": 350000,
+    "sesionId": 0,
+    "cupos": 20,
+    "edadMinima": 16,
+    "edadMaxima": 65,
+    "fechaInicio": "2027-01-11",
+    "fechaFin": "2027-02-19",
+    "horarios": [
+      {
+        "dias": ["Lunes", "Miércoles"],
+        "horaInicio": "09:00",
+        "horaFin": "11:00"
+      }
+    ]
   },
   {
     "id": 2,
@@ -21,11 +34,24 @@
     "descripcion": "Explora tu creatividad dando forma a la arcilla. Aprende técnicas de modelado, texturas y construcción de figuras tridimensionales.",
     "duracion": 4,
     "docente": "Carlos Ramírez",
-    "tipo": "taller",
+    "tipo": "Taller",
     "categoria": "escultura",
     "modalidad": "presencial",
-    "nivel": "intermedio",
-    "precio": 120000
+    "nivel": "Intermedio",
+    "precio": 120000,
+    "sesionId": 0,
+    "cupos": 15,
+    "edadMinima": 18,
+    "edadMaxima": 60,
+    "fechaInicio": "2027-01-16",
+    "fechaFin": "2027-01-16",
+    "horarios": [
+      {
+        "dias": ["Sábado"],
+        "horaInicio": "09:00",
+        "horaFin": "13:00"
+      }
+    ]
   },
   {
     "id": 3,
@@ -35,11 +61,24 @@
     "descripcion": "Descubre la fotografía como medio de expresión artística. Aprende sobre composición, iluminación, perspectiva y encuadre para capturar imágenes originales.",
     "duracion": 36,
     "docente": "Andrés Gómez",
-    "tipo": "curso",
+    "tipo": "Curso",
     "categoria": "fotografia",
     "modalidad": "hibrido",
-    "nivel": "intermedio",
-    "precio": 300000
+    "nivel": "Intermedio",
+    "precio": 300000,
+    "sesionId": 0,
+    "cupos": 18,
+    "edadMinima": 16,
+    "edadMaxima": 60,
+    "fechaInicio": "2027-01-12",
+    "fechaFin": "2027-02-23",
+    "horarios": [
+      {
+        "dias": ["Martes", "Jueves"],
+        "horaInicio": "14:00",
+        "horaFin": "16:00"
+      }
+    ]
   },
   {
     "id": 4,
@@ -49,11 +88,24 @@
     "descripcion": "Desarrolla tus habilidades artísticas aprendiendo los principios fundamentales del dibujo. Practica trazos, proporciones, sombras y perspectiva.",
     "duracion": 18,
     "docente": "María Torres",
-    "tipo": "curso",
+    "tipo": "Curso",
     "categoria": "dibujo",
-    "modalidad": "virtual",
-    "nivel": "facil",
-    "precio": 150000
+    "modalidad": "Virtual",
+    "nivel": "Fácil",
+    "precio": 150000,
+    "sesionId": 0,
+    "cupos": 25,
+    "edadMinima": 12,
+    "edadMaxima": 60,
+    "fechaInicio": "2027-01-13",
+    "fechaFin": "2027-02-03",
+    "horarios": [
+      {
+        "dias": ["Miércoles", "Viernes"],
+        "horaInicio": "16:00",
+        "horaFin": "17:30"
+      }
+    ]
   },
   {
     "id": 5,
@@ -63,11 +115,24 @@
     "descripcion": "Experimenta con los colores y la transparencia de la acuarela. Aprende técnicas de degradados, mezclas de colores y efectos de textura.",
     "duracion": 5,
     "docente": "Laura Martínez",
-    "tipo": "taller",
+    "tipo": "Taller",
     "categoria": "pintura",
     "modalidad": "presencial",
-    "nivel": "intermedio",
-    "precio": 140000
+    "nivel": "Intermedio",
+    "precio": 140000,
+    "sesionId": 0,
+    "cupos": 12,
+    "edadMinima": 15,
+    "edadMaxima": 65,
+    "fechaInicio": "2027-01-23",
+    "fechaFin": "2027-01-23",
+    "horarios": [
+      {
+        "dias": ["Sábado"],
+        "horaInicio": "09:00",
+        "horaFin": "14:00"
+      }
+    ]
   },
   {
     "id": 6,
@@ -77,11 +142,24 @@
     "descripcion": "Conoce el poder de la fotografía como lenguaje visual y artístico. Explora su evolución, estilos representativos y grandes fotógrafos.",
     "duracion": 2,
     "docente": "Andrés Gómez",
-    "tipo": "charla",
+    "tipo": "Charla",
     "categoria": "fotografia",
-    "modalidad": "virtual",
-    "nivel": "facil",
-    "precio": 30000
+    "modalidad": "Virtual",
+    "nivel": "Fácil",
+    "precio": 30000,
+    "sesionId": 0,
+    "cupos": 40,
+    "edadMinima": 14,
+    "edadMaxima": 70,
+    "fechaInicio": "2027-01-20",
+    "fechaFin": "2027-01-20",
+    "horarios": [
+      {
+        "dias": ["Miércoles"],
+        "horaInicio": "18:00",
+        "horaFin": "20:00"
+      }
+    ]
   },
   {
     "id": 7,
@@ -91,11 +169,24 @@
     "descripcion": "Aprende a representar el cuerpo humano mediante técnicas de observación y dibujo. Estudia proporciones, anatomía básica, movimiento y postura.",
     "duracion": 6,
     "docente": "María Torres",
-    "tipo": "taller",
+    "tipo": "Taller",
     "categoria": "dibujo",
     "modalidad": "presencial",
-    "nivel": "avanzado",
-    "precio": 180000
+    "nivel": "Avanzado",
+    "precio": 180000,
+    "sesionId": 0,
+    "cupos": 10,
+    "edadMinima": 18,
+    "edadMaxima": 60,
+    "fechaInicio": "2027-01-30",
+    "fechaFin": "2027-01-30",
+    "horarios": [
+      {
+        "dias": ["Sábado"],
+        "horaInicio": "09:00",
+        "horaFin": "15:00"
+      }
+    ]
   },
   {
     "id": 8,
@@ -105,11 +196,24 @@
     "descripcion": "Realiza un recorrido por la historia de la escultura desde las civilizaciones antiguas hasta el arte contemporáneo.",
     "duracion": 1.5,
     "docente": "Carlos Ramírez",
-    "tipo": "charla",
+    "tipo": "Charla",
     "categoria": "escultura",
     "modalidad": "hibrido",
-    "nivel": "facil",
-    "precio": 25000
+    "nivel": "Fácil",
+    "precio": 25000,
+    "sesionId": 0,
+    "cupos": 35,
+    "edadMinima": 14,
+    "edadMaxima": 70,
+    "fechaInicio": "2027-01-27",
+    "fechaFin": "2027-01-27",
+    "horarios": [
+      {
+        "dias": ["Miércoles"],
+        "horaInicio": "18:00",
+        "horaFin": "19:30"
+      }
+    ]
   },
   {
     "id": 9,
@@ -119,11 +223,24 @@
     "descripcion": "Domina las técnicas de sombreado y texturas con lápices de grafito para crear retratos hiperrealistas llenos de vida.",
     "duracion": 24,
     "docente": "María Torres",
-    "tipo": "curso",
+    "tipo": "Curso",
     "categoria": "dibujo",
-    "modalidad": "virtual",
-    "nivel": "avanzado",
-    "precio": 280000
+    "modalidad": "Virtual",
+    "nivel": "Avanzado",
+    "precio": 280000,
+    "sesionId": 0,
+    "cupos": 15,
+    "edadMinima": 18,
+    "edadMaxima": 60,
+    "fechaInicio": "2027-01-14",
+    "fechaFin": "2027-02-18",
+    "horarios": [
+      {
+        "dias": ["Martes", "Jueves"],
+        "horaInicio": "18:00",
+        "horaFin": "19:00"
+      }
+    ]
   },
   {
     "id": 10,
@@ -133,11 +250,24 @@
     "descripcion": "Aprende a manipular metales, realizar cortes precisos y unir piezas mediante soldadura para crear esculturas contemporáneas.",
     "duracion": 30,
     "docente": "Carlos Ramírez",
-    "tipo": "curso",
+    "tipo": "Curso",
     "categoria": "escultura",
     "modalidad": "presencial",
-    "nivel": "avanzado",
-    "precio": 450000
+    "nivel": "Avanzado",
+    "precio": 450000,
+    "sesionId": 0,
+    "cupos": 10,
+    "edadMinima": 18,
+    "edadMaxima": 55,
+    "fechaInicio": "2027-01-15",
+    "fechaFin": "2027-03-05",
+    "horarios": [
+      {
+        "dias": ["Viernes"],
+        "horaInicio": "14:00",
+        "horaFin": "19:00"
+      }
+    ]
   },
   {
     "id": 11,
@@ -147,11 +277,24 @@
     "descripcion": "Comprende el uso de flashes, modificadores de luz y esquemas de iluminación profesional para fotografía de producto y retrato.",
     "duracion": 12,
     "docente": "Andrés Gómez",
-    "tipo": "taller",
+    "tipo": "Taller",
     "categoria": "fotografia",
     "modalidad": "presencial",
-    "nivel": "avanzado",
-    "precio": 220000
+    "nivel": "Avanzado",
+    "precio": 220000,
+    "sesionId": 0,
+    "cupos": 12,
+    "edadMinima": 18,
+    "edadMaxima": 60,
+    "fechaInicio": "2027-01-18",
+    "fechaFin": "2027-01-25",
+    "horarios": [
+      {
+        "dias": ["Lunes", "Miércoles"],
+        "horaInicio": "15:00",
+        "horaFin": "18:00"
+      }
+    ]
   },
   {
     "id": 12,
@@ -161,25 +304,51 @@
     "descripcion": "Descubre la versatilidad de la pintura acrílica para representar la naturaleza. Trabajo con espátulas, pinceles y teoría del color.",
     "duracion": 20,
     "docente": "Laura Martínez",
-    "tipo": "curso",
+    "tipo": "Curso",
     "categoria": "pintura",
     "modalidad": "hibrido",
-    "nivel": "intermedio",
-    "precio": 230000
+    "nivel": "Intermedio",
+    "precio": 230000,
+    "sesionId": 0,
+    "cupos": 18,
+    "edadMinima": 16,
+    "edadMaxima": 65,
+    "fechaInicio": "2027-01-19",
+    "fechaFin": "2027-02-23",
+    "horarios": [
+      {
+        "dias": ["Martes", "Jueves"],
+        "horaInicio": "09:00",
+        "horaFin": "10:00"
+      }
+    ]
   },
   {
     "id": 13,
     "nombre": "Composición y narrativa visual",
     "imagen": "../../public/assets/cursos/mat-cha-003.png",
     "descripcionImagen": "Ejemplos de composición en obras de arte",
-    "descripcion": "Una charla interactiva sobre cómo guiar el ojo del espectador y contar historias potentes a través de la composición en cualquier disciplina visual.",
+    "descripcion": "Una Charla interactiva sobre cómo guiar el ojo del espectador y contar historias potentes a través de la composición en cualquier disciplina visual.",
     "duracion": 2,
     "docente": "Laura Martínez",
-    "tipo": "charla",
+    "tipo": "Charla",
     "categoria": "dibujo",
-    "modalidad": "virtual",
-    "nivel": "intermedio",
-    "precio": 35000
+    "modalidad": "Virtual",
+    "nivel": "Intermedio",
+    "precio": 35000,
+    "sesionId": 0,
+    "cupos": 40,
+    "edadMinima": 16,
+    "edadMaxima": 70,
+    "fechaInicio": "2027-02-03",
+    "fechaFin": "2027-02-03",
+    "horarios": [
+      {
+        "dias": ["Miércoles"],
+        "horaInicio": "18:00",
+        "horaFin": "20:00"
+      }
+    ]
   },
   {
     "id": 14,
@@ -189,11 +358,24 @@
     "descripcion": "Iníciate en el arte tradicional de la talla en madera. Conoce las herramientas, los tipos de madera y las técnicas seguras de desbaste.",
     "duracion": 8,
     "docente": "Carlos Ramírez",
-    "tipo": "taller",
+    "tipo": "Taller",
     "categoria": "escultura",
     "modalidad": "presencial",
-    "nivel": "facil",
-    "precio": 160000
+    "nivel": "Fácil",
+    "precio": 160000,
+    "sesionId": 0,
+    "cupos": 15,
+    "edadMinima": 16,
+    "edadMaxima": 65,
+    "fechaInicio": "2027-02-06",
+    "fechaFin": "2027-02-06",
+    "horarios": [
+      {
+        "dias": ["Sábado"],
+        "horaInicio": "09:00",
+        "horaFin": "17:00"
+      }
+    ]
   },
   {
     "id": 15,
@@ -203,11 +385,24 @@
     "descripcion": "Lleva tus fotografías al siguiente nivel aprendiendo a revelar y retocar imágenes utilizando software profesional. Ajuste de color, contraste y correcciones.",
     "duracion": 15,
     "docente": "Andrés Gómez",
-    "tipo": "curso",
+    "tipo": "Curso",
     "categoria": "fotografia",
-    "modalidad": "virtual",
-    "nivel": "intermedio",
-    "precio": 190000
+    "modalidad": "Virtual",
+    "nivel": "Intermedio",
+    "precio": 190000,
+    "sesionId": 0,
+    "cupos": 20,
+    "edadMinima": 16,
+    "edadMaxima": 60,
+    "fechaInicio": "2027-02-08",
+    "fechaFin": "2027-03-01",
+    "horarios": [
+      {
+        "dias": ["Lunes", "Miércoles", "Viernes"],
+        "horaInicio": "17:00",
+        "horaFin": "18:00"
+      }
+    ]
   },
   {
     "id": 16,
@@ -217,10 +412,23 @@
     "descripcion": "Rompe las reglas combinando diferentes materiales y técnicas. Experimenta integrando recortes, texturas y pintura en una sola obra.",
     "duracion": 6,
     "docente": "María Torres",
-    "tipo": "taller",
+    "tipo": "Taller",
     "categoria": "pintura",
     "modalidad": "hibrido",
-    "nivel": "facil",
-    "precio": 130000
+    "nivel": "Fácil",
+    "precio": 130000,
+    "sesionId": 0,
+    "cupos": 15,
+    "edadMinima": 14,
+    "edadMaxima": 65,
+    "fechaInicio": "2027-02-13",
+    "fechaFin": "2027-02-13",
+    "horarios": [
+      {
+        "dias": ["Sábado"],
+        "horaInicio": "09:00",
+        "horaFin": "15:00"
+      }
+    ]
   }
 ]

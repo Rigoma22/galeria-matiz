@@ -129,7 +129,7 @@ function CustomNavbar({paginaActual, setPaginaActual}) {
                             >
                                 <NavDropdown.Item
                                     href="#obras-artistas"
-                                    onClick={() => setPaginaActual('exposiciones')}
+                                    onClick={() => setPaginaActual('artistas')}
                                 >
                                     🧑‍🎨 Obras y Artistas
                                 </NavDropdown.Item>
@@ -141,7 +141,7 @@ function CustomNavbar({paginaActual, setPaginaActual}) {
                                 </NavDropdown.Item>
                                 <NavDropdown.Item
                                     href="#novedades-arte"
-                                    onClick={() => setPaginaActual('home')}
+                                    onClick={() => setPaginaActual('novedades')}
                                 >
                                     📰 Novedades del Mundo del Arte
                                 </NavDropdown.Item>

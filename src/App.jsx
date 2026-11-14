@@ -10,6 +10,8 @@ import Visitanos from './pages/Visitanos';
 import Exposiciones from './pages/Exposiciones';
 import ArteShop from './pages/ArteShop';
 import Cursos from './pages/Cursos';
+import Artistas from './pages/Artistas';
+import Novedades from './pages/Novedades';
 
 function App() {
   const [paginaActual, setPaginaActual] = useState('home');
@@ -26,8 +28,12 @@ function App() {
         return <ArteShop />;
       case 'cursos':
         return <Cursos />;
+      case 'artistas':
+        return <Artistas />;
       case 'carrito':
         return <Carrito />;
+      case 'novedades':
+        return <Novedades />
       default:
         return <Home />;
     }
