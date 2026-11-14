@@ -174,7 +174,7 @@ const Exposiciones = () => {
       <div className="bg-light min-vh-100 py-5">
         <div className="container">
           <button 
-            className="btn btn-outline-secondary mb-4" 
+            className="btn btn-outline-primary rounded-pill mb-4 px-4 py-2"
             onClick={() => setSalaSeleccionada(null)}
           >
             <i className="bi bi-arrow-left me-2"></i>Volver a Exposiciones
@@ -234,7 +234,6 @@ const Exposiciones = () => {
                   </div>
                 </div>
 
-                {/* Botón interactivo para planear visita */}
                 <button 
                   onClick={() => { 
                     const linkVisitanos = document.querySelector('a[href*="visitanos"]') || document.querySelector('button');
@@ -242,7 +241,7 @@ const Exposiciones = () => {
                   }} 
                   className="btn btn-primary rounded-pill w-100 py-2 shadow-sm"
                 >
-                  <i className="bi bi-calendar-check me-2"></i>Planea tu visita para esta sala
+                  <i className="bi bi-calendar-check me-2"></i>Planea tu Visita para esta Sala
                 </button>
               </div>
             </div>
@@ -285,7 +284,7 @@ const Exposiciones = () => {
                       <span className="d-block text-secondary small">Hasta: {expo.fechaFin}</span>
                     </div>
                     <button 
-                      className="btn btn-primary rounded-pill w-100 mt-3 small"
+                      className="btn btn-outline-primary rounded-pill w-100 mt-3 small"
                       onClick={() => setSalaSeleccionada(expo)}
                     >
                       Ver detalles de la sala
@@ -296,18 +295,20 @@ const Exposiciones = () => {
             ))}
           </div>
         </section>
+       <section className="mt-5 pt-4">
+          <div className="p-3 mb-4 bg-primary bg-opacity-10 border-start border-primary border-4 rounded-end">
+            <h2 className="fs-4 text-primary fw-bold m-0">Próximas Exposiciones</h2>
+          </div>
 
-        <section>
-          <h2 className="fs-4 text-secondary mb-4 border-bottom pb-2">Próximas Exposiciones</h2>
           <div className="row g-4">
             {exposicionesProximas.map((expo) => (
               <div key={expo.id} className="col-12 col-md-6 col-lg-4">
-                <div className="card h-100 bg-white shadow-sm border-0 opacity-75 hover-opacity-100 transition-opacity">
+                <div className="card h-100 bg-white shadow-sm border-0">
                   <img 
                     src={expo.imagen} 
-                    className="card-img-top object-fit-cover grayscale" 
+                    className="card-img-top object-fit-cover" 
                     alt={expo.alt} 
-                    style={{ height: '200px', filter: 'grayscale(30%)' }} 
+                    style={{ height: '200px' }} 
                   />
                   <div className="card-body d-flex flex-column">
                     <h3 className="fs-5 fw-bold text-dark">{expo.titulo}</h3>
@@ -316,11 +317,11 @@ const Exposiciones = () => {
                     </p>
                     <p className="small text-dark flex-grow-1">{expo.descripcion}</p>
                     <div className="mt-3 p-2 bg-light rounded text-center border border-secondary border-opacity-25">
-                      <span className="d-block fw-bold text-secondary small">Inicia: {expo.fechaInicio}</span>
+                      <span className="d-block fw-bold text-primary small">Inicia: {expo.fechaInicio}</span>
                       <span className="d-block text-secondary small">Hasta: {expo.fechaFin}</span>
                     </div>
                     <button 
-                      className="btn btn-outline-secondary rounded-pill w-100 mt-3 small"
+                      className="btn btn-outline-primary rounded-pill w-100 mt-3 small"
                       onClick={() => setSalaSeleccionada(expo)}
                     >
                       Ver detalles de la sala

@@ -155,7 +155,7 @@ function CustomNavbar({paginaActual, setPaginaActual}) {
                             >
                                 <NavDropdown.Item
                                     href="#sobre-nosotros"
-                                    onClick={() => setPaginaActual('home')}
+                                    onClick={() => setPaginaActual('sobrenosotros')}
                                 >
                                     🏛️ Sobre Nosotros
                                 </NavDropdown.Item>

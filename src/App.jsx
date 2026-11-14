@@ -10,6 +10,7 @@ import Visitanos from './pages/Visitanos';
 import Exposiciones from './pages/Exposiciones';
 import ArteShop from './pages/ArteShop';
 import Cursos from './pages/Cursos';
+import SobreNosotros from './pages/SobreNosotros';
 import Artistas from './pages/Artistas';
 import Novedades from './pages/Novedades';
 
@@ -32,6 +33,8 @@ function App() {
         return <Artistas />;
       case 'carrito':
         return <Carrito />;
+      case 'sobrenosotros':
+        return <SobreNosotros />;
       case 'novedades':
         return <Novedades />
       default:
