@@ -1,0 +1,593 @@
+[
+    {
+        "id": 1,
+        "nombre": "Juan Pérez",
+        "especialidad": "Pintura",
+        "imagen": "../../public/assets/artistas/mat-art-1.svg",
+        "imagenArtista": "../../public/assets/artistas/mat-art-foto-1.svg",
+        "imagenDescripcion": "",
+        "presentacion": "¡Hola! Soy Juan Pérez, artista especializado en pintura. Me apasiona expresar emociones e historias a través de los colores y las formas. En mis obras busco transmitir sensaciones que permitan a cada persona interpretar el arte desde su propia perspectiva.",
+        "obras": [
+            {
+                "nombre": "Horizonte Carmesí",
+                "imagenObra": "../../public/assets/obras/mat-art-1-obra-1.jpg",
+                "imagenObraDescripcion": "Pintura de un atardecer abstracto con tonos rojos intensos y pinceladas expresivas.",
+                "descripcion": "Técnica mixta sobre lienzo de lino (120 x 90 cm). Presenta capas superpuestas de pigmento rojo cadmio y carmín aplicadas con brocha ancha sobre una base imprimada en gesso.",
+                "fechaCreacion": "2023-05-14"
+            },
+            {
+                "nombre": "Ecos de la Ciudad",
+                "imagenObra": "../../public/assets/obras/mat-art-1-obra-2.jpg",
+                "imagenObraDescripcion": "Composición cromática que representa el movimiento y la energía de una calle concurrida.",
+                "descripcion": "Acrílico y óleo sobre bastidor de madera (100 x 100 cm). Estructura geométrica fragmentada con trazos diagonales y empastes de alto contraste.",
+                "fechaCreacion": "2024-02-20"
+            },
+            {
+                "nombre": "Silencio Azul",
+                "imagenObra": "../../public/assets/obras/mat-art-1-obra-3.jpg",
+                "imagenObraDescripcion": "Obra minimalista dominada por matices azules que evocan calma e introspección.",
+                "descripcion": "Pigmento mineral aglutinado en aceite sobre tela de algodón (80 x 60 cm). Degradado continuo en tonos azul prusia y ultramar con acabado satinado.",
+                "fechaCreacion": "2024-11-08"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "nombre": "María García",
+        "especialidad": "Escultura",
+        "imagen": "../../public/assets/artistas/mat-art-2.svg",
+        "imagenArtista": "../../public/assets/artistas/mat-art-foto-2.svg",
+        "imagenDescripcion": "",
+        "presentacion": "¡Mucho gusto! Soy María García, escultora. Disfruto transformar materiales en piezas llenas de significado y personalidad. Mi trabajo busca dar vida a las ideas mediante volúmenes, texturas y formas que despierten la curiosidad.",
+        "obras": [
+            {
+                "nombre": "Equilibrio en Piedra",
+                "imagenObra": "../../public/assets/obras/mat-art-2-obra-1.jpg",
+                "imagenObraDescripcion": "Escultura tallada en mármol blanco con formas orgánicas entrelazadas.",
+                "descripcion": "Talla directa en bloque único de mármol de Carrara (65 x 40 x 35 cm). Superficie pulida con abrasivos finos que alterna zonas lisas con áreas de desbaste a cincel.",
+                "fechaCreacion": "2022-09-12"
+            },
+            {
+                "nombre": "Raíces de Bronce",
+                "imagenObra": "../../public/assets/obras/mat-art-2-obra-2.jpg",
+                "imagenObraDescripcion": "Pieza fundida en bronce que simula el crecimiento ascendente de un árbol.",
+                "descripcion": "Fundición a la cera perdida en bronce al silicio sobre peana de granito negro (85 x 30 x 30 cm). Patinado químico en tonos óxido y verde oscuro.",
+                "fechaCreacion": "2024-06-03"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "nombre": "Carlos López",
+        "especialidad": "Fotografía",
+        "imagen": "../../public/assets/artistas/mat-art-3.svg",
+        "imagenArtista": "../../public/assets/artistas/mat-art-foto-3.svg",
+        "imagenDescripcion": "",
+        "presentacion": "¡Hola! Soy Carlos López, fotógrafo artístico. Me encanta capturar momentos únicos y convertirlos en imágenes que cuentan historias. Considero que cada fotografía es una oportunidad para mostrar una perspectiva diferente del mundo.",
+        "obras": [
+            {
+                "nombre": "Niebla Matinal",
+                "imagenObra": "../../public/assets/obras/mat-art-3-obra-1.jpg",
+                "imagenObraDescripcion": "Fotografía en blanco y negro de un bosque cubierto por una densa neblina al amanecer.",
+                "descripcion": "Impresión monocromática Giclée sobre papel baritado de 310 g (60 x 90 cm). Captura digital de formato completo con lente de 50 mm, apertura f/8 y exposición de 1/125 s.",
+                "fechaCreacion": "2023-01-19"
+            },
+            {
+                "nombre": "Reflejos Urbanos",
+                "imagenObra": "../../public/assets/obras/mat-art-3-obra-2.jpg",
+                "imagenObraDescripcion": "Captura nocturna de luces de neón reflejadas sobre el asfalto mojado.",
+                "descripcion": "Fotografía digital de larga exposición (4 s, f/11, ISO 100) impresa sobre papel metálico montado en Dibond (70 x 50 cm).",
+                "fechaCreacion": "2023-10-27"
+            },
+            {
+                "nombre": "Mirada del Tiempo",
+                "imagenObra": "../../public/assets/obras/mat-art-3-obra-3.jpg",
+                "imagenObraDescripcion": "Retrato en primer plano con iluminación lateral que resalta las texturas del rostro.",
+                "descripcion": "Copia en gelatina de plata revelada manualmente a partir de negativo de medio formato 120 mm (50 x 40 cm). Esquema de luz dura a 90 grados.",
+                "fechaCreacion": "2024-04-15"
+            },
+            {
+                "nombre": "Geometría de Sombras",
+                "imagenObra": "../../public/assets/obras/mat-art-3-obra-4.jpg",
+                "imagenObraDescripcion": "Juego arquitectónico de luces y sombras proyectadas sobre una fachada moderna.",
+                "descripcion": "Impresión pigmentaria de archivo sobre papel de algodón mate (80 x 60 cm). Toma realizada con objetivo descentrable de 24 mm para corrección de perspectiva.",
+                "fechaCreacion": "2025-01-10"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "nombre": "Ana Martínez",
+        "especialidad": "Dibujo",
+        "imagen": "../../public/assets/artistas/mat-art-4.svg",
+        "imagenArtista": "../../public/assets/artistas/mat-art-foto-4.svg",
+        "imagenDescripcion": "",
+        "presentacion": "¡Hola a todos! Soy Ana Martínez, artista dedicada al dibujo. Encuentro inspiración en los pequeños detalles de la vida cotidiana y disfruto convertirlos en ilustraciones llenas de expresión. Para mí, cada trazo tiene algo que contar.",
+        "obras": [
+            {
+                "nombre": "Taza de Café y Lluvia",
+                "imagenObra": "../../public/assets/obras/mat-art-4-obra-1.jpg",
+                "imagenObraDescripcion": "Dibujo a grafito de una mesa junto a una ventana empañada en un día lluvioso.",
+                "descripcion": "Grafito (gradaciones 2H a 6B) sobre papel de algodón libre de ácido de 250 g (42 x 29.7 cm). Uso de difumino y goma moldeable para luces reflejadas.",
+                "fechaCreacion": "2023-08-05"
+            },
+            {
+                "nombre": "Manos Creadoras",
+                "imagenObra": "../../public/assets/obras/mat-art-4-obra-2.jpg",
+                "imagenObraDescripcion": "Estudio anatómico detallado hecho con carboncillo sobre papel texturizado.",
+                "descripcion": "Carboncillo prensado y creta blanca sobre papel verjurado gris de 180 g (50 x 35 cm), fijado con barniz mate protector.",
+                "fechaCreacion": "2024-07-22"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "nombre": "Luis Fernández",
+        "especialidad": "Grabado",
+        "imagen": "../../public/assets/artistas/mat-art-5.svg",
+        "imagenArtista": "../../public/assets/artistas/mat-art-foto-5.svg",
+        "imagenDescripcion": "",
+        "presentacion": "Soy Luis Fernández, artista especializado en grabado. Me apasionan las técnicas tradicionales de impresión y la posibilidad de crear imágenes mediante diferentes texturas y superficies. Mi objetivo es conservar y explorar esta forma de expresión artística.",
+        "obras": [
+            {
+                "nombre": "El Viejo Faro",
+                "imagenObra": "../../public/assets/obras/mat-art-5-obra-1.jpg",
+                "imagenObraDescripcion": "Xilografía en tinta negra sobre papel algodón que muestra un faro frente a un mar agitado.",
+                "descripcion": "Xilografía a fibra sobre matriz de madera de peral estampada con tinta calcográfica negra en papel Hahnemühle de 300 g (40 x 30 cm). Tirada de 15 ejemplares.",
+                "fechaCreacion": "2022-11-30"
+            },
+            {
+                "nombre": "Flora Silvestre",
+                "imagenObra": "../../public/assets/obras/mat-art-5-obra-2.jpg",
+                "imagenObraDescripcion": "Aguafuerte con detalles botánicos finos y sombreado tramado.",
+                "descripcion": "Aguafuerte y aguatinta sobre plancha de zinc de 1.5 mm mordida en ácido nítrico (35 x 25 cm). Estampación manual en tórculo.",
+                "fechaCreacion": "2023-06-18"
+            },
+            {
+                "nombre": "Laberinto Urbano",
+                "imagenObra": "../../public/assets/obras/mat-art-5-obra-3.jpg",
+                "imagenObraDescripcion": "Linograbado geométrico que representa calles vistas desde una perspectiva aérea.",
+                "descripcion": "Linograbado a dos tintas mediante técnica de plancha perdida sobre papel japonés Kozo de 90 g (50 x 50 cm).",
+                "fechaCreacion": "2024-09-14"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "nombre": "Sofía Rodríguez",
+        "especialidad": "Cerámica artística",
+        "imagen": "../../public/assets/artistas/mat-art-6.svg",
+        "imagenArtista": "../../public/assets/artistas/mat-art-foto-6.svg",
+        "imagenDescripcion": "",
+        "presentacion": "¡Hola! Soy Sofía Rodríguez, ceramista. Me encanta trabajar con arcilla y descubrir las posibilidades creativas de este material. Cada pieza que elaboro es única y representa una combinación de paciencia, creatividad y trabajo manual.",
+        "obras": [
+            {
+                "nombre": "Vasija Terracota",
+                "imagenObra": "../../public/assets/obras/mat-art-6-obra-1.jpg",
+                "imagenObraDescripcion": "Ánfora de barro cocido con grabados geométricos ancestrales y acabado mate.",
+                "descripcion": "Gres ferruginoso modelado mediante técnica de urdido y torneado (45 cm de alto x 28 cm de diámetro). Decoración incisa en estado de dureza de cuero y cocción en horno eléctrico a 1240 °C.",
+                "fechaCreacion": "2024-03-11"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "nombre": "Diego Sánchez",
+        "especialidad": "Arte digital",
+        "imagen": "../../public/assets/artistas/mat-art-7.svg",
+        "imagenArtista": "../../public/assets/artistas/mat-art-foto-7.svg",
+        "imagenDescripcion": "",
+        "presentacion": "¡Qué gusto conocerlos! Soy Diego Sánchez, artista digital. Me interesa explorar las posibilidades que ofrece la tecnología para crear nuevas experiencias visuales. En mis obras combino creatividad, innovación y herramientas digitales.",
+        "obras": [
+            {
+                "nombre": "Neón Sintético",
+                "imagenObra": "../../public/assets/obras/mat-art-7-obra-1.jpg",
+                "imagenObraDescripcion": "Paisaje futurista renderizado en 3D con iluminación ciberpunk y estructuras flotantes.",
+                "descripcion": "Modelado poligonal y renderizado mediante trazado de rayos (ray tracing) en resolución 8K (7680 x 4320 px). Iluminación volumétrica con mapas HDRI.",
+                "fechaCreacion": "2023-07-09"
+            },
+            {
+                "nombre": "Fragmentos de Código",
+                "imagenObra": "../../public/assets/obras/mat-art-7-obra-2.jpg",
+                "imagenObraDescripcion": "Arte generativo compuesto por partículas luminosas que forman un rostro humano.",
+                "descripcion": "Sistema generativo programado en GLSL y Processing basado en simulación de fluidos y campos vectoriales. Salida en formato digital sin pérdida (4000 x 4000 px).",
+                "fechaCreacion": "2024-01-25"
+            },
+            {
+                "nombre": "Oasis Virtual",
+                "imagenObra": "../../public/assets/obras/mat-art-7-obra-3.jpg",
+                "imagenObraDescripcion": "Ilustración digital surrealista de un desierto bajo dos lunas brillantes.",
+                "descripcion": "Pintura digital realizada mediante tableta gráfica con pinceles personalizados de textura y posprocesado de color en espacio RGB de 16 bits (5000 x 3500 px).",
+                "fechaCreacion": "2025-02-02"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "nombre": "Valentina Gómez",
+        "especialidad": "Pintura al óleo",
+        "imagen": "../../public/assets/artistas/mat-art-8.svg",
+        "imagenArtista": "../../public/assets/artistas/mat-art-foto-8.svg",
+        "imagenDescripcion": "",
+        "presentacion": "¡Hola! Soy Valentina Gómez, pintora especializada en óleo. Me fascina trabajar con colores, luces y sombras para crear composiciones llenas de vida. Mi inspiración proviene de la naturaleza, las emociones y los momentos cotidianos.",
+        "obras": [
+            {
+                "nombre": "Jardín al Atardecer",
+                "imagenObra": "../../public/assets/obras/mat-art-8-obra-1.jpg",
+                "imagenObraDescripcion": "Óleo sobre lienzo con pinceladas gruesas que retratan flores iluminadas por luz dorada.",
+                "descripcion": "Óleo sobre lienzo de algodón montado en bastidor (90 x 70 cm). Técnica alla prima con empastes de espátula y médium de aceite de linaza.",
+                "fechaCreacion": "2023-04-17"
+            },
+            {
+                "nombre": "Bodegón de Otoño",
+                "imagenObra": "../../public/assets/obras/mat-art-8-obra-2.jpg",
+                "imagenObraDescripcion": "Composición clásica de frutas de temporada y telas drapeadas con técnica de claroscuro.",
+                "descripcion": "Óleo sobre tabla de madera preparada con imprimación de creta (60 x 80 cm). Ejecutada mediante veladuras sucesivas sobre grisalla monocroma.",
+                "fechaCreacion": "2024-10-30"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "nombre": "Andrés Torres",
+        "especialidad": "Acuarela",
+        "imagen": "../../public/assets/artistas/mat-art-9.svg",
+        "imagenArtista": "../../public/assets/artistas/mat-art-foto-9.svg",
+        "imagenDescripcion": "",
+        "presentacion": "Soy Andrés Torres, artista especializado en acuarela. Disfruto de la transparencia de los colores y de la espontaneidad que ofrece esta técnica. A través de mis pinturas busco representar paisajes, momentos y emociones de una manera delicada.",
+        "obras": [
+            {
+                "nombre": "Llovizna en el Puerto",
+                "imagenObra": "../../public/assets/obras/mat-art-9-obra-1.jpg",
+                "imagenObraDescripcion": "Acuarela fluida con tonos grises y ocres que muestra barcos difuminados por la lluvia.",
+                "descripcion": "Acuarela profesional sobre papel 100% algodón prensado en frío de 300 g (38 x 56 cm). Técnica húmedo sobre húmedo con pigmentos de granulación.",
+                "fechaCreacion": "2023-03-04"
+            },
+            {
+                "nombre": "Montañas de Niebla",
+                "imagenObra": "../../public/assets/obras/mat-art-9-obra-2.jpg",
+                "imagenObraDescripcion": "Paisaje serrano pintado con veladuras suaves de azul cobalto y verde esmeralda.",
+                "descripcion": "Acuarela sobre papel Arches grano fino de 300 g (50 x 70 cm). Superposición de 6 capas transparentes con reserva de blancos del soporte.",
+                "fechaCreacion": "2024-05-19"
+            },
+            {
+                "nombre": "Primavera Efímera",
+                "imagenObra": "../../public/assets/obras/mat-art-9-obra-3.jpg",
+                "imagenObraDescripcion": "Rama de cerezo en flor con salpicaduras sutiles de pigmento rosa sobre papel blanco.",
+                "descripcion": "Acuarela y gouache blanco sobre papel prensado en caliente de 300 g (30 x 40 cm). Trazo gestual con pincel de pelo de marta.",
+                "fechaCreacion": "2025-03-28"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "nombre": "Isabella Ramírez",
+        "especialidad": "Escultura contemporánea",
+        "imagen": "../../public/assets/artistas/mat-art-10.svg",
+        "imagenArtista": "../../public/assets/artistas/mat-art-foto-10.svg",
+        "imagenDescripcion": "",
+        "presentacion": "¡Hola! Soy Isabella Ramírez, escultora contemporánea. Me gusta experimentar con materiales y formas poco convencionales para crear obras que inviten a reflexionar. Creo que la escultura es una manera de transformar ideas en experiencias visuales.",
+        "obras": [
+            {
+                "nombre": "Tensión Metálica",
+                "imagenObra": "../../public/assets/obras/mat-art-10-obra-1.jpg",
+                "imagenObraDescripcion": "Instalación de acero inoxidable pulido y cables tensados que reflejan el entorno.",
+                "descripcion": "Ensamblaje estructural de láminas de acero inoxidable 304 pulido a espejo y tensores de acero trenzado (210 x 140 x 120 cm).",
+                "fechaCreacion": "2023-11-14"
+            },
+            {
+                "nombre": "Vacío Contenido",
+                "imagenObra": "../../public/assets/obras/mat-art-10-obra-2.jpg",
+                "imagenObraDescripcion": "Estructura geométrica de resina translúcida y hormigón suspendida en equilibrio.",
+                "descripcion": "Vaciado en molde de silicona con resina epoxi cristalina y agregado de hormigón celular (75 x 55 x 55 cm).",
+                "fechaCreacion": "2024-08-29"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "nombre": "Mateo Herrera",
+        "especialidad": "Arte abstracto",
+        "imagen": "../../public/assets/artistas/mat-art-11.svg",
+        "imagenArtista": "../../public/assets/artistas/mat-art-foto-11.svg",
+        "imagenDescripcion": "",
+        "presentacion": "¡Hola a todos! Soy Mateo Herrera, artista abstracto. Mi trabajo se caracteriza por la exploración de formas, líneas y colores. Me interesa que cada visitante encuentre un significado propio en mis obras y experimente el arte libremente.",
+        "obras": [
+            {
+                "nombre": "Caos Armónico",
+                "imagenObra": "../../public/assets/obras/mat-art-11-obra-1.jpg",
+                "imagenObraDescripcion": "Lienzo de gran formato con trazos gestuales negros sobre manchas amarillas y turquesas.",
+                "descripcion": "Acrílico y esmalte sintético sobre lienzo crudo sin imprimar (180 x 150 cm). Aplicación por goteo (dripping) y brocha industrial.",
+                "fechaCreacion": "2022-12-03"
+            },
+            {
+                "nombre": "Ritmo Interior",
+                "imagenObra": "../../public/assets/obras/mat-art-11-obra-2.jpg",
+                "imagenObraDescripcion": "Sucesión de formas geométricas superpuestas en una paleta de colores tierra.",
+                "descripcion": "Acrílico con carga de polvo de mármol sobre panel de MDF reforzado (100 x 80 cm). Superficies planas delimitadas con cinta de enmascarar.",
+                "fechaCreacion": "2023-09-21"
+            },
+            {
+                "nombre": "Convergencia",
+                "imagenObra": "../../public/assets/obras/mat-art-11-obra-3.jpg",
+                "imagenObraDescripcion": "Líneas dinámicas que se cruzan en el centro creando una sensación de profundidad.",
+                "descripcion": "Tinta china y acrílico fluido sobre papel montado en bastidor (120 x 90 cm). Contraste lineal de alta densidad.",
+                "fechaCreacion": "2024-04-02"
+            },
+            {
+                "nombre": "Impulso Cromático",
+                "imagenObra": "../../public/assets/obras/mat-art-11-obra-4.jpg",
+                "imagenObraDescripcion": "Explosión de color aplicada con espátula sobre fondo neutro.",
+                "descripcion": "Óleo en barra y acrílico de alta viscosidad sobre lino belga (110 x 110 cm). Relieve pictórico de hasta 4 mm de espesor.",
+                "fechaCreacion": "2025-04-11"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "nombre": "Camila Vargas",
+        "especialidad": "Ilustración artística",
+        "imagen": "../../public/assets/artistas/mat-art-12.svg",
+        "imagenArtista": "../../public/assets/artistas/mat-art-foto-12.svg",
+        "imagenDescripcion": "",
+        "presentacion": "¡Mucho gusto! Soy Camila Vargas, ilustradora artística. Me apasiona contar historias mediante imágenes y personajes. Encuentro inspiración en los libros, la naturaleza y las experiencias diarias, que transformo en ilustraciones llenas de imaginación.",
+        "obras": [
+            {
+                "nombre": "El Guardián del Bosque",
+                "imagenObra": "../../public/assets/obras/mat-art-12-obra-1.jpg",
+                "imagenObraDescripcion": "Ilustración narrativa de un personaje fantástico rodeado de criaturas luminosas.",
+                "descripcion": "Técnica mixta de tinta estilográfica, acuarela y lápices de color policromos sobre papel Bristol de 250 g (40 x 30 cm).",
+                "fechaCreacion": "2023-06-12"
+            },
+            {
+                "nombre": "Viaje en Papel",
+                "imagenObra": "../../public/assets/obras/mat-art-12-obra-2.jpg",
+                "imagenObraDescripcion": "Escena onírica de un niño navegando en un barco de origami sobre un mar de nubes.",
+                "descripcion": "Gouache opaco y pastel seco sobre cartulina de algodón tintada (35 x 50 cm). Ilustración editorial de composición panorámica.",
+                "fechaCreacion": "2024-12-05"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "nombre": "Sebastián Castro",
+        "especialidad": "Pintura acrílica",
+        "imagen": "../../public/assets/artistas/mat-art-13.svg",
+        "imagenArtista": "../../public/assets/artistas/mat-art-foto-13.svg",
+        "imagenDescripcion": "",
+        "presentacion": "Soy Sebastián Castro, pintor especializado en acrílico. Me gusta experimentar con colores intensos, contrastes y diferentes texturas. Mi intención es crear obras que transmitan energía y permitan al espectador descubrir nuevos detalles en cada observación.",
+        "obras": [
+            {
+                "nombre": "Pulso Tropical",
+                "imagenObra": "../../public/assets/obras/mat-art-13-obra-1.jpg",
+                "imagenObraDescripcion": "Pintura acrílica vibrante con hojas exóticas en tonos neón y relieves texturizados.",
+                "descripcion": "Acrílico fluorescente y gel de modelado pesado sobre lienzo de algodón (100 x 80 cm). Acabado con barniz acrílico brillante con filtro UV.",
+                "fechaCreacion": "2023-08-24"
+            },
+            {
+                "nombre": "Contraste Solar",
+                "imagenObra": "../../public/assets/obras/mat-art-13-obra-2.jpg",
+                "imagenObraDescripcion": "Composición de alto contraste entre amarillos brillantes y sombras violetas.",
+                "descripcion": "Pintura acrílica mate sobre tabla entelada (70 x 70 cm). Uso de colores complementarios directos sin mezclas intermedias.",
+                "fechaCreacion": "2024-03-19"
+            },
+            {
+                "nombre": "Marea Alta",
+                "imagenObra": "../../public/assets/obras/mat-art-13-obra-3.jpg",
+                "imagenObraDescripcion": "Representación dinámica de olas rompiendo con capas gruesas de pintura acrílica.",
+                "descripcion": "Acrílico con pasta de textura arenosa sobre lienzo de lino (130 x 90 cm). Aplicado mediante espátulas metálicas de distintos calibres.",
+                "fechaCreacion": "2025-01-30"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "nombre": "Lucía Morales",
+        "especialidad": "Dibujo artístico",
+        "imagen": "../../public/assets/artistas/mat-art-14.svg",
+        "imagenArtista": "../../public/assets/artistas/mat-art-foto-14.svg",
+        "imagenDescripcion": "",
+        "presentacion": "¡Hola! Soy Lucía Morales, dibujante artística. Me especializo en representar figuras, rostros y escenas mediante diferentes técnicas de dibujo. Para mí, el lápiz es una herramienta capaz de expresar sentimientos y capturar la esencia de las personas.",
+        "obras": [
+            {
+                "nombre": "Melancolía en Sanguina",
+                "imagenObra": "../../public/assets/obras/mat-art-14-obra-1.jpg",
+                "imagenObraDescripcion": "Retrato expresivo realizado con lápiz sanguina sobre papel tono crema.",
+                "descripcion": "Lápiz sanguina seca y sepia sobre papel Ingres ahuesado de 160 g (40 x 30 cm). Sombreado mediante tramas cruzadas (hatching).",
+                "fechaCreacion": "2023-05-09"
+            },
+            {
+                "nombre": "Bailarina en Reposo",
+                "imagenObra": "../../public/assets/obras/mat-art-14-obra-2.jpg",
+                "imagenObraDescripcion": "Boceto detallado de figura humana con sombreado suave en grafito.",
+                "descripcion": "Grafito en polvo y portaminas de 0.5 mm y 2 mm sobre papel satinado de 220 g (50 x 35 cm).",
+                "fechaCreacion": "2024-06-27"
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "nombre": "Gabriel Rojas",
+        "especialidad": "Fotografía artística",
+        "imagen": "../../public/assets/artistas/mat-art-15.svg",
+        "imagenArtista": "../../public/assets/artistas/mat-art-foto-15.svg",
+        "imagenDescripcion": "",
+        "presentacion": "¡Un placer estar aquí! Soy Gabriel Rojas, fotógrafo artístico. Me interesa jugar con la iluminación, los encuadres y las perspectivas para crear imágenes que transmitan emociones. Cada fotografía es una oportunidad para descubrir la belleza de nuestro entorno.",
+        "obras": [
+            {
+                "nombre": "Perspectiva Infinita",
+                "imagenObra": "../../public/assets/obras/mat-art-15-obra-1.jpg",
+                "imagenObraDescripcion": "Toma en contrapicado de rascacielos convergentes bajo un cielo despejado.",
+                "descripcion": "Fotografía digital capturada con lente ultra gran angular de 14 mm (f/11, 1/500 s, ISO 64). Impresión cromógena sobre papel Fuji Crystal Archive (90 x 60 cm).",
+                "fechaCreacion": "2023-02-14"
+            },
+            {
+                "nombre": "Luz entre Columnas",
+                "imagenObra": "../../public/assets/obras/mat-art-15-obra-2.jpg",
+                "imagenObraDescripcion": "Haces de luz solar atravesando una galería antigua con partículas de polvo en el aire.",
+                "descripcion": "Impresión Fine Art sobre papel Hahnemühle Photo Rag 308 g (75 x 50 cm). Medición puntual de exposición en altas luces (85 mm, f/2.8, 1/250 s).",
+                "fechaCreacion": "2024-01-12"
+            },
+            {
+                "nombre": "Horizonte Invertido",
+                "imagenObra": "../../public/assets/obras/mat-art-15-obra-3.jpg",
+                "imagenObraDescripcion": "Fotografía simétrica de un lago calmo que refleja las montañas con total nitidez.",
+                "descripcion": "Captura con filtro de densidad neutra (ND1000) de 30 segundos de exposición (35 mm, f/14, ISO 100), montada bajo metacrilato óptico (100 x 65 cm).",
+                "fechaCreacion": "2024-11-19"
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "nombre": "Daniela Ortiz",
+        "especialidad": "Arte minimalista",
+        "imagen": "../../public/assets/artistas/mat-art-16.svg",
+        "imagenArtista": "../../public/assets/artistas/mat-art-foto-16.svg",
+        "imagenDescripcion": "",
+        "presentacion": "Soy Daniela Ortiz, artista especializada en arte minimalista. Me inspira la simplicidad y la capacidad de transmitir grandes ideas utilizando pocos elementos. En mis creaciones busco equilibrio, armonía y una conexión visual con el espectador.",
+        "obras": [
+            {
+                "nombre": "Línea Única",
+                "imagenObra": "../../public/assets/obras/mat-art-16-obra-1.jpg",
+                "imagenObraDescripcion": "Lienzo blanco atravesado por una sola línea negra continua de grosor variable.",
+                "descripcion": "Acrílico negro marfil sobre lienzo preparado con 5 capas de gesso lijado (120 x 120 cm). Ejecución continua a mano alzada.",
+                "fechaCreacion": "2023-07-31"
+            },
+            {
+                "nombre": "Dos Puntos de Equilibrio",
+                "imagenObra": "../../public/assets/obras/mat-art-16-obra-2.jpg",
+                "imagenObraDescripcion": "Composición monocromática con dos círculos en relieve distribuidos asimétricamente.",
+                "descripcion": "Relieve en madera lacada en blanco mate sobre panel de aluminio compuesto (100 x 100 x 3 cm).",
+                "fechaCreacion": "2024-09-04"
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "nombre": "Javier Castillo",
+        "especialidad": "Arte pop",
+        "imagen": "../../public/assets/artistas/mat-art-17.svg",
+        "imagenArtista": "../../public/assets/artistas/mat-art-foto-17.svg",
+        "imagenDescripcion": "",
+        "presentacion": "¡Hola! Soy Javier Castillo, artista pop. Me encanta utilizar colores llamativos, imágenes cotidianas y referencias de la cultura popular. Mi intención es crear obras divertidas y dinámicas que conecten el arte con la vida diaria.",
+        "obras": [
+            {
+                "nombre": "Sinfonía Retro",
+                "imagenObra": "../../public/assets/obras/mat-art-17-obra-1.jpg",
+                "imagenObraDescripcion": "Serigrafía colorida de un casete clásico con tramas de puntos estilo cómic.",
+                "descripcion": "Serigrafía artesanal a 5 tintas planas con trama de semitonos Ben-Day sobre papel Fedrigoni de 300 g (70 x 50 cm). Edición limitada de 30 copias.",
+                "fechaCreacion": "2023-04-28"
+            },
+            {
+                "nombre": "Ícono Urbano",
+                "imagenObra": "../../public/assets/obras/mat-art-17-obra-2.jpg",
+                "imagenObraDescripcion": "Retrato estilizado en cuatro paneles con contrastes de magenta, cian y amarillo.",
+                "descripcion": "Políptico de 4 lienzos (40 x 40 cm cada uno) en acrílico y serigrafía con tintas de alta saturación.",
+                "fechaCreacion": "2024-02-11"
+            },
+            {
+                "nombre": "Boom Cotidiano",
+                "imagenObra": "../../public/assets/obras/mat-art-17-obra-3.jpg",
+                "imagenObraDescripcion": "Collage pop con onomatopeyas tipográficas y objetos de consumo reinterpretados.",
+                "descripcion": "Collage de recortes impresos en offset, pintura en aerosol y acrílico sobre tabla de madera (90 x 70 cm) con resina epoxi brillante.",
+                "fechaCreacion": "2025-05-06"
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "nombre": "Natalia Jiménez",
+        "especialidad": "Pintura surrealista",
+        "imagen": "../../public/assets/artistas/mat-art-18.svg",
+        "imagenArtista": "../../public/assets/artistas/mat-art-foto-18.svg",
+        "imagenDescripcion": "",
+        "presentacion": "¡Bienvenidos! Soy Natalia Jiménez, pintora surrealista. Me apasiona explorar el mundo de los sueños, la imaginación y lo imposible. A través de mis pinturas busco crear escenarios que despierten preguntas y permitan escapar de la realidad cotidiana.",
+        "obras": [
+            {
+                "nombre": "Relojes de Arena Flotantes",
+                "imagenObra": "../../public/assets/obras/mat-art-18-obra-1.jpg",
+                "imagenObraDescripcion": "Paisaje desértico donde relojes de cristal flotan suspendidos bajo un cielo violeta.",
+                "descripcion": "Óleo extrafino sobre lienzo de lino de trama fina (80 x 100 cm). Técnica hiperrealista con pinceles de pelo sintético de punta fina para detalles de transparencia.",
+                "fechaCreacion": "2023-10-15"
+            },
+            {
+                "nombre": "La Puerta en el Océano",
+                "imagenObra": "../../public/assets/obras/mat-art-18-obra-2.jpg",
+                "imagenObraDescripcion": "Una puerta de madera abierta en medio del mar que revela un bosque estrellado.",
+                "descripcion": "Óleo y temple de huevo sobre panel de madera de abedul (90 x 65 cm). Perspectiva lineal doble con contraste de iluminación fría y cálida.",
+                "fechaCreacion": "2024-08-18"
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "nombre": "Ricardo Mendoza",
+        "especialidad": "Escultura en madera",
+        "imagen": "../../public/assets/artistas/mat-art-19.svg",
+        "imagenArtista": "../../public/assets/artistas/mat-art-foto-19.jpg",
+        "imagenDescripcion": "",
+        "presentacion": "Soy Ricardo Mendoza, escultor especializado en madera. Disfruto trabajar con materiales naturales y aprovechar sus texturas y formas originales. Cada escultura representa para mí un diálogo entre la naturaleza, la creatividad y el trabajo artesanal.",
+        "obras": [
+            {
+                "nombre": "Espiral de Cedro",
+                "imagenObra": "../../public/assets/obras/mat-art-19-obra-1.jpg",
+                "imagenObraDescripcion": "Escultura tallada en una sola pieza de madera de cedro siguiendo sus vetas naturales.",
+                "descripcion": "Talla sustractiva con gubias y escofinas en tronco macizo de cedro rojo (95 x 35 x 30 cm). Acabado con cera de abeja natural pulida.",
+                "fechaCreacion": "2022-08-21"
+            },
+            {
+                "nombre": "Vuelo Tallado",
+                "imagenObra": "../../public/assets/obras/mat-art-19-obra-2.jpg",
+                "imagenObraDescripcion": "Figura estilizada de un ave en pleno vuelo pulida con aceites naturales.",
+                "descripcion": "Madera de nogal americano tallada y lijada hasta grano 600 (50 x 75 x 40 cm), tratada con aceite de tung polimerizado.",
+                "fechaCreacion": "2023-12-09"
+            },
+            {
+                "nombre": "Nudo del Tiempo",
+                "imagenObra": "../../public/assets/obras/mat-art-19-obra-3.jpg",
+                "imagenObraDescripcion": "Tronco recuperado de roble transformado en una pieza abstracta de curvas suaves.",
+                "descripcion": "Madera recuperada de roble blanco vaciada internamente con fresa rotativa y estabilizada con resina (70 x 50 x 45 cm).",
+                "fechaCreacion": "2024-07-14"
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "nombre": "Paula Rivas",
+        "especialidad": "Fotografía documental",
+        "imagen": "../../public/assets/artistas/mat-art-20.svg",
+        "imagenArtista": "../../public/assets/artistas/mat-art-foto-20.svg",
+        "imagenDescripcion": "",
+        "presentacion": "¡Hola! Soy Paula Rivas, fotógrafa documental. Me apasiona contar historias reales a través de imágenes y capturar momentos que muchas veces pasan desapercibidos. Creo que la fotografía es una herramienta poderosa para conservar recuerdos y mostrar diferentes realidades.",
+        "obras": [
+            {
+                "nombre": "Oficios del Alba",
+                "imagenObra": "../../public/assets/obras/mat-art-20-obra-1.jpg",
+                "imagenObraDescripcion": "Fotografía espontánea de un panadero artesanal trabajando en su taller al amanecer.",
+                "descripcion": "Fotografía documental con luz natural disponible (35 mm, f/2.0, 1/60 s, ISO 1600). Impresión pigmentaria sobre papel satinado (60 x 40 cm).",
+                "fechaCreacion": "2023-03-22"
+            },
+            {
+                "nombre": "Mercado del Domingo",
+                "imagenObra": "../../public/assets/obras/mat-art-20-obra-2.jpg",
+                "imagenObraDescripcion": "Escena documental llena de color y movimiento en una plaza de mercado local.",
+                "descripcion": "Captura digital en color con lente angular de 28 mm (f/5.6, 1/250 s, ISO 400). Impresión de archivo en formato 70 x 50 cm.",
+                "fechaCreacion": "2023-09-10"
+            },
+            {
+                "nombre": "Manos de la Tierra",
+                "imagenObra": "../../public/assets/obras/mat-art-20-obra-3.svg",
+                "imagenObraDescripcion": "Retrato documental de un agricultor sosteniendo su cosecha tras la jornada.",
+                "descripcion": "Retrato ambiental capturado con óptica de 50 mm (f/2.8, 1/500 s, ISO 200) en hora dorada. Copia sobre papel de algodón mate (50 x 75 cm).",
+                "fechaCreacion": "2024-05-04"
+            },
+            {
+                "nombre": "Memorias del Barrio",
+                "imagenObra": "../../public/assets/obras/mat-art-20-obra-4.svg",
+                "imagenObraDescripcion": "Registro en blanco y negro de vecinos conversando frente a casas tradicionales.",
+                "descripcion": "Fotografía callejera en blanco y negro (35 mm, f/8, 1/500 s, ISO 400). Impresión en papel baritado de alto rango dinámico (60 x 40 cm).",
+                "fechaCreacion": "2025-02-18"
+            }
+        ]
+    }
+]
