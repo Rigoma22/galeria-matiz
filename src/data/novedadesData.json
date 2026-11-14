@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "titulo": "Gabriel Rojas presenta su nueva colección fotográfica «Horizontes de Luz»",
+        "fecha": "2026-11-10",
+        "categoria": "Exposición",
+        "descripcion": "El fotógrafo artístico Gabriel Rojas anuncia una nueva colección centrada en la exploración de la luz, la arquitectura y los paisajes naturales. La exposición reúne fotografías que destacan por sus perspectivas originales y composiciones visuales impactantes.",
+        "imagen": "../../public/assets/artistas/mat-art-15.svg",
+        "fuente":""
+    },
+    {
+        "id": 2,
+        "titulo": "Javier Castillo apuesta por el arte pop en su nueva serie «Colores de la Ciudad»",
+        "fecha": "2026-11-08",
+        "categoria": "Lanzamiento artístico",
+        "descripcion": "El artista pop Javier Castillo presenta una nueva serie de obras inspiradas en la cultura urbana, los objetos cotidianos y la estética retro. Sus composiciones combinan colores vibrantes, referencias culturales y técnicas de serigrafía para acercar el arte contemporáneo a nuevos públicos.",
+        "imagen": "../../public/assets/artistas/mat-art-17.svg",
+        "fuente":""
+    },
+    {
+        "id": 3,
+        "titulo": "Johnny López conecta el arte ancestral latinoamericano con los emoticones de la era digital",
+        "fecha": "2026-11-06",
+        "categoria": "Exposición",
+        "descripcion": "El artista colombiano Johnny López presenta «Animaticón», una exposición en el Museo Palacio Vergara de Viña del Mar, Chile, que reúne 21 obras entre pinturas y esculturas. Su propuesta combina elementos del arte pop, emojis y emoticones con símbolos de culturas ancestrales como San Agustín y la Quimbaya. A través de este lenguaje visual, el artista explora la relación entre la memoria, la identidad, la espiritualidad y las nuevas formas de comunicación, creando un diálogo entre el pasado cultural latinoamericano y la era digital.",
+        "imagen": "../../public/assets/novedades/mat-nov-1.webp",
+        "fuente": "https://www.eltiempo.com/cultura/arte-y-teatro/el-artista-colombiano-johnny-lopez-expone-en-chile-la-irreverente-conexion-entre-arte-ancestral-y-era-digital-3599077"
+    },
+    {
+        "id": 4,
+        "titulo": "Fernando Montaño revela su faceta como artista plástico con una exposición en Cartagena",
+        "fecha": "2026-11-01",
+        "categoria": "Exposición",
+        "descripcion": "El reconocido bailarín colombiano Fernando Montaño presenta por primera vez en Colombia su trabajo como artista plástico, con una exposición en el Museo Histórico de Cartagena. La muestra reúne 19 pinturas y cinco esculturas que reflejan su creatividad y su conexión con el movimiento. Desde 2022, Montaño ha desarrollado una técnica particular que consiste en pintar mientras baila ballet, convirtiendo sus movimientos y emociones en expresiones visuales. Entre las obras destacadas se encuentra «Buenaventura», una pintura realizada durante una presentación artística en Cartagena, y «HiKing», una escultura dedicada al rey Carlos III.",
+        "imagen": "../../public/assets/novedades/mat-nov-2.webp",
+        "fuente": "https://www.eltiempo.com/cultura/arte-y-teatro/pocas-personas-conocian-del-artista-mas-alla-de-la-danza-el-bailarin-colombiano-fernando-montano-expone-sus-obras-en-cartagena-por-primera-vez-3597212"
+    }
+]

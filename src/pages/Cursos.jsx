@@ -12,7 +12,8 @@ function Curso({
   duracion,
   docente,
   verDetalle,
-  nivel
+  nivel,
+  fechaInicio,
 }) {
   return (
     <div className="card w-100 h-100">
@@ -23,13 +24,18 @@ function Curso({
         alt={descripcionImagen}
       />
       <div className="card-body d-flex flex-column gap-0">
-        <div className="d-flex flex-row gap-2">
-        <span className="badge bg-primary align-self-start mb-1">{tipo}</span>
-        <span className="badge bg-secondary align-self-start mb-1">{nivel}</span>
-        </div>
         <h6 className="card-title fw-bold">{nombre}</h6>
+        <div className="d-flex flex-row gap-2">
+          <span className="badge bg-primary align-self-start mb-1">{tipo}</span>
+          <span className="badge bg-secondary align-self-start mb-1">
+            {nivel}
+          </span>
+        </div>
         <p className="card-text mb-0 mt-auto">
           <strong>Duración:</strong> {duracion} horas
+        </p>
+        <p className="card-text mb-0 mt-auto">
+          <strong>Fecha inicio:</strong> {fechaInicio}
         </p>
         <p className="card-text mb-1 mt-auto">
           <strong>Docente:</strong> {docente}
@@ -41,7 +47,9 @@ function Curso({
           >
             Detalles
           </button>
-          <button className="btn btn-primary flex-fill box-shadow">Comprar</button>
+          <button className="btn btn-primary flex-fill box-shadow">
+            Inscribirse
+          </button>
         </div>
       </div>
     </div>
@@ -96,7 +104,10 @@ const Paginacion = ({
   }
 
   return (
-    <nav aria-label="Paginación" className="d-flex justify-content-center bottom py-3 border-top">
+    <nav
+      aria-label="Paginación"
+      className="d-flex justify-content-center bottom py-3 border-top"
+    >
       <ul className="pagination pagination-lg">
         {numeroPaginas.map((numero) => {
           return (
@@ -178,8 +189,8 @@ function CursoDetalle({ detalleCurso, show, onHide }) {
         </div>
       </Modal.Body>
       <Modal.Footer className="py-1">
-        <Button onClick={onHide}>Close</Button>
-        <Button variant="primary">Comprar curso</Button>
+        <Button onClick={onHide}>Cerrar</Button>
+        <Button variant="primary">Inscribirse</Button>
       </Modal.Footer>
     </Modal>
   );
@@ -352,7 +363,7 @@ export default function Cursos() {
       instancia.to(0);
     }
   }, [categoriaCarrusel]);
-  
+
   const seleccionarCategoriaCarrusel = (categoria) => {
     const normalizado = categoria
       .toLowerCase()
@@ -380,24 +391,21 @@ export default function Cursos() {
     }
   };
 
-  useEffect(()=>{
-    const manejarReajuste = () =>{
-      if(window.innerWidth<770){
+  useEffect(() => {
+    const manejarReajuste = () => {
+      if (window.innerWidth < 770) {
         setCursosPorSlide(1);
-      }else if (window.innerWidth < 1200) {
+      } else if (window.innerWidth < 1200) {
         setCursosPorSlide(2);
-      }
-      else{
+      } else {
         setCursosPorSlide(3);
       }
-      
-    }
-    window.addEventListener('resize',manejarReajuste);
-    return()=>{
-      window.removeEventListener('resize',manejarReajuste)
-    }
-  })
-
+    };
+    window.addEventListener("resize", manejarReajuste);
+    return () => {
+      window.removeEventListener("resize", manejarReajuste);
+    };
+  });
 
   return (
     <div className="d-flex flex-column">
@@ -421,7 +429,9 @@ export default function Cursos() {
       <div className="container-lg">
         <div className="row g-3  py-2 align-items-center">
           <div className="col-12 col-lg-3 d-flex flex-column align-items-center justify-content-center">
-            <h2 className="text-dark h4 fw-semibold mb-1">¿Qué quieres aprender?</h2>
+            <h2 className="text-dark h4 fw-semibold mb-1">
+              ¿Qué quieres aprender?
+            </h2>
             <div className="d-flex flex-wrap gap-2">
               {["Pintura", "Dibujo", "Escultura", "Fotografía"].map(
                 (categoria) => {
@@ -498,7 +508,7 @@ export default function Cursos() {
                         return (
                           <div className="col">
                             <Curso
-                              key={curso.id}
+                              key={id}
                               id={id}
                               nombre={nombre}
                               imagen={imagen}
@@ -681,7 +691,8 @@ export default function Cursos() {
                   duracion,
                   docente,
                   tipo,
-                  nivel
+                  nivel,
+                  fechaInicio,
                 } = curso;
                 return (
                   <div className="col" key={id}>
@@ -695,6 +706,7 @@ export default function Cursos() {
                       tipo={tipo}
                       verDetalle={verDetalle}
                       nivel={nivel}
+                      fechaInicio={fechaInicio}
                     />
                   </div>
                 );
@@ -713,7 +725,6 @@ export default function Cursos() {
             onHide={() => setMostrarDetalle(false)}
           />
         </div>
-        
       </section>
     </div>
   );
