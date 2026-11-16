@@ -13,6 +13,7 @@ import Cursos from './pages/Cursos';
 import SobreNosotros from './pages/SobreNosotros';
 import Artistas from './pages/Artistas';
 import Novedades from './pages/Novedades';
+import AdminProductos from './pages/AdminProductos';
 
 function App() {
   const [paginaActual, setPaginaActual] = useState('home');
@@ -37,6 +38,12 @@ function App() {
         return <SobreNosotros />;
       case 'novedades':
         return <Novedades />
+      case 'adminproductos':
+        return (
+          <AdminProductos
+            onSalir={() => setPaginaActual('home')}
+          />
+        );
       default:
         return <Home />;
     }
