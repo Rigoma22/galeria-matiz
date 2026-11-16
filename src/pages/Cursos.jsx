@@ -1,20 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { obtenerCursoPorId, obtenerCursos } from "../services/cursoService";
-import { Modal, Button } from "react-bootstrap";
+import { validarInscripcionCurso, obtenerEstadoInscripcion } from "../utils/validacionesCursos";
+import { Modal, Button, Alert } from "react-bootstrap";
+import { useCarrito } from "../context/CarritoContext";
 
 function Curso({
+  curso,
   id,
   imagen,
   descripcionImagen,
   nombre,
-  descripcion,
   tipo,
   duracion,
   docente,
   verDetalle,
   nivel,
   fechaInicio,
+  inscribir
 }) {
+
+  const estadoInscripcion = obtenerEstadoInscripcion(curso);
+
   return (
     <div className="card w-100 h-100">
       <img
@@ -47,8 +53,14 @@ function Curso({
           >
             Detalles
           </button>
-          <button className="btn btn-primary flex-fill box-shadow">
-            Inscribirse
+          <button 
+            type="button" 
+            className="btn btn-primary flex-fill box-shadow"
+            disabled={!estadoInscripcion.disponible}
+            title={estadoInscripcion.mensaje}
+            onClick={() => inscribir(curso)}
+          >
+            {estadoInscripcion.disponible? 'Inscribirse' : 'Inscripciones cerradas'}
           </button>
         </div>
       </div>
@@ -131,10 +143,14 @@ const Paginacion = ({
   );
 };
 
-function CursoDetalle({ detalleCurso, show, onHide }) {
+function CursoDetalle({ detalleCurso, show, onHide, inscribir }) {
+  
   if (!detalleCurso) {
     return null;
   }
+  
+  const estadoInscripcion = obtenerEstadoInscripcion(detalleCurso);
+
   return (
     <Modal
       show={show}
@@ -190,7 +206,15 @@ function CursoDetalle({ detalleCurso, show, onHide }) {
       </Modal.Body>
       <Modal.Footer className="py-1">
         <Button onClick={onHide}>Cerrar</Button>
-        <Button variant="primary">Inscribirse</Button>
+        <Button 
+          variant="primary" 
+          disabled={!estadoInscripcion.disponible}
+          title={estadoInscripcion.mensaje}
+          onClick={() => {const agregado = inscribir(detalleCurso); 
+            if (agregado) {onHide();}
+          }}
+        >{estadoInscripcion.disponible ? 'Inscribirse' : 'Inscripciones cerradas'}
+        </Button>
       </Modal.Footer>
     </Modal>
   );
@@ -201,6 +225,26 @@ export default function Cursos() {
   const [cursosData, setCursos] = useState([]);
   const [cursosFiltrados, setCursosFiltrados] = useState([]);
   const [valorEntrada, setValorBusqueda] = useState("");
+
+  //Conexión con el carrito
+  const { agregarCurso } = useCarrito();
+  const [mensajeCarrito, setMensajeCarrito] = useState('');
+  const [errorCarrito, setErrorCarrito] = useState('');
+  const inscribirCurso = curso => {
+    setMensajeCarrito('');
+    setErrorCarrito('');
+    try {
+      validarInscripcionCurso(curso);
+      agregarCurso(curso);
+    
+      setMensajeCarrito(`"${curso.nombre}" se agregó correctamente al carrito.`);
+
+      return true;
+    } catch (error) {
+      setErrorCarrito(error.message);
+      return false;
+    }
+  };
 
   // Estados de filtros
   const [filtroCategoria, setFiltroCategoria] = useState([]);
@@ -409,6 +453,27 @@ export default function Cursos() {
 
   return (
     <div className="d-flex flex-column">
+
+      {mensajeCarrito && (
+        <Alert
+          variant="success"
+          dismissible
+          onClose={() => setMensajeCarrito('')}
+          role="status"
+        > {mensajeCarrito} </Alert>
+        )
+      }
+      
+      {errorCarrito && (
+        <Alert
+          variant="danger"
+          dismissible
+          onClose={() => setErrorCarrito('')}
+          role="alert"
+        > {errorCarrito} </Alert>
+        )
+      }
+
       {/* Banner Principal */}
       <div className="bg-light position-relative">
         <img
@@ -508,15 +573,18 @@ export default function Cursos() {
                         return (
                           <div className="col">
                             <Curso
-                              key={id}
-                              id={id}
-                              nombre={nombre}
-                              imagen={imagen}
-                              descripcionImagen={descripcionImagen}
-                              duracion={duracion}
-                              docente={docente}
-                              tipo={tipo}
+                              curso={curso}
+                              id={curso.id}
+                              nombre={curso.nombre}
+                              imagen={curso.imagen}
+                              descripcionImagen={curso.descripcionImagen}
+                              duracion={curso.duracion}
+                              docente={curso.docente}
+                              tipo={curso.tipo}
+                              nivel={curso.nivel}
+                              fechaInicio={curso.fechaInicio}
                               verDetalle={verDetalle}
+                              inscribir={inscribirCurso}
                             />
                           </div>
                         );
@@ -697,16 +765,18 @@ export default function Cursos() {
                 return (
                   <div className="col" key={id}>
                     <Curso
-                      id={id}
-                      nombre={nombre}
-                      imagen={imagen}
-                      descripcionImagen={descripcionImagen}
-                      duracion={duracion}
-                      docente={docente}
-                      tipo={tipo}
+                      curso={curso}
+                      id={curso.id}
+                      nombre={curso.nombre}
+                      imagen={curso.imagen}
+                      descripcionImagen={curso.descripcionImagen}
+                      duracion={curso.duracion}
+                      docente={curso.docente}
+                      tipo={curso.tipo}
+                      nivel={curso.nivel}
+                      fechaInicio={curso.fechaInicio}
                       verDetalle={verDetalle}
-                      nivel={nivel}
-                      fechaInicio={fechaInicio}
+                      inscribir={inscribirCurso}
                     />
                   </div>
                 );
@@ -723,6 +793,7 @@ export default function Cursos() {
             detalleCurso={detalleCurso}
             show={mostrarDetalle}
             onHide={() => setMostrarDetalle(false)}
+            inscribir={inscribirCurso}
           />
         </div>
       </section>
