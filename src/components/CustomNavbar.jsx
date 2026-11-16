@@ -7,10 +7,16 @@ import React from 'react';
 import { Navbar, Nav, Container, Form, Button, Badge, NavDropdown, InputGroup } from 'react-bootstrap';
 //importación del hook useCarrito para acceder al estado del carrito
 import { useCarrito } from '../context/CarritoContext';
+// importación para el acceso a la administración del sitio
+import AdminLogin from './AdminLogin';
 
 function CustomNavbar({paginaActual, setPaginaActual}) {
     const [busqueda, setBusqueda] = React.useState('');
     const { cantidadCarrito } = useCarrito();
+    // Control del formulario de acceso administrativo.
+    const [mostrarLoginAdmin, setMostrarLoginAdmin] = React.useState(false);
+    // Se ejecuta cuando las credenciales son correctas.
+    const ingresarAdministracion = () => { setMostrarLoginAdmin(false); setPaginaActual('adminproductos'); };
 
     const handleBuscar = (e) => {
         e.preventDefault();
@@ -50,6 +56,16 @@ function CustomNavbar({paginaActual, setPaginaActual}) {
                         </Button>
                         </InputGroup>
                     </Form>
+                    {/* Acceso al panel administrativo */}
+                    <Button
+                    variant="light"
+                    className="rounded-pill px-3 text-dark border btn-sm"
+                    aria-label="Ingresar a administración"
+                    title="Administración"
+                    onClick={() => setMostrarLoginAdmin(true)}
+                    >
+                        <span aria-hidden="true">⚙️</span>
+                    </Button>
                     
                     {/*Carrito de Compras */}
                     <Button
@@ -192,6 +208,12 @@ function CustomNavbar({paginaActual, setPaginaActual}) {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+            {/* Formulario de acceso administrativo */}
+            <AdminLogin
+                show={mostrarLoginAdmin}
+                onHide={() => setMostrarLoginAdmin(false)}
+                onAccesoCorrecto={ingresarAdministracion}
+            />
 
         </header>
     );

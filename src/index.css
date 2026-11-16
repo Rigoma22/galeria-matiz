@@ -96,7 +96,6 @@ footer .hover-link:hover {
     }
 }
 
-
 /* Botón de suscripción al boletín */
 .btn-unirme {
     font-size: 0.85rem;
@@ -124,5 +123,51 @@ footer .hover-link:hover {
 
     .btn-unirme:hover {
         transform: none;
+    }
+}
+
+
+/* =========================================
+   FORMULARIO ADMINISTRATIVO DE PRODUCTOS
+   ========================================= */
+
+/* Limitar el alto del cuadro de diálogo */
+.modal-producto-admin .modal-content {
+    height: 90dvh;
+    max-height: 90dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* El formulario contiene el body y footer */
+.modal-producto-admin .modal-content > form {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* Área desplazable del formulario */
+.modal-producto-admin .modal-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+}
+
+/* Mantener visibles encabezado y botones */
+.modal-producto-admin .modal-header,
+.modal-producto-admin .modal-footer {
+    flex-shrink: 0;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 576px) {
+    .modal-producto-admin .modal-content {
+        height: 95dvh;
+        max-height: 95dvh;
     }
 }
