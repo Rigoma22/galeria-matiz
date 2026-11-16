@@ -27,17 +27,15 @@ export function calcularEntradas({
   generales = 0,
   preferenciales = 0,
   infantiles = 0,
-  adultosResponsables = 0
 }) {
   const cantidades = [
     generales,
     preferenciales,
-    infantiles,
-    adultosResponsables
+    infantiles
   ];
 
   if (cantidades.some(
-    n => !Number.isInteger(n) || n < 0
+    cantidad => !Number.isInteger(cantidad) || cantidad < 0
   )) {
     throw new Error('Las cantidades deben ser enteros no negativos.');
   }
@@ -55,17 +53,9 @@ export function calcularEntradas({
     );
   }
 
-  const entradasPagadas = generales + preferenciales;
-
-  if (adultosResponsables > entradasPagadas) {
+  if (infantiles > 0 && generales < 1) {
     throw new Error(
-      'Los adultos responsables deben tener una entrada.'
-    );
-  }
-
-  if (infantiles > 0 && adultosResponsables < 1) {
-    throw new Error(
-      'Los menores deben ingresar con un adulto responsable.'
+      'Los menores de 12 años deben ingresar con al menos una entrada general.'
     );
   }
 

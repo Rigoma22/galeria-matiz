@@ -22,7 +22,7 @@ function App() {
       case 'home':
         return <Home />;
       case 'visitanos':
-        return <Visitanos />;
+        return <Visitanos setPaginaActual={setPaginaActual}/>;
       case 'exposiciones':
         return <Exposiciones />;
       case 'arteshop':

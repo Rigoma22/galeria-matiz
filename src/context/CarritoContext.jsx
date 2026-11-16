@@ -53,7 +53,7 @@ export function CarritoProvider({ children }) {
       .reduce((total, item) => total + item.cantidad, 0);
 
       if (ocupacionCarrito + nuevosVisitantes > AFORO_GALERIA) {
-        throw new Error(`La selección supera los ${AFORO_GALERIA} ` + 'visitantes por horario.');
+        throw new Error(`La selección supera los ${AFORO_GALERIA} ` + 'visitantes por horario, por favor intente en otro bloque de horario.');
       }
   };
 
@@ -142,7 +142,6 @@ export function CarritoProvider({ children }) {
       generales = 0,
       preferenciales = 0,
       infantiles = 0,
-      adultosResponsables = 0
     } = seleccion;
 
     validarSesion(fecha, horario);
@@ -150,8 +149,7 @@ export function CarritoProvider({ children }) {
     const calculo = calcularEntradas({
       generales,
       preferenciales,
-      infantiles,
-      adultosResponsables
+      infantiles
     });
 
     validarAforo(
@@ -174,8 +172,7 @@ export function CarritoProvider({ children }) {
         horario,
         generales,
         preferenciales,
-        infantiles,
-        adultosResponsables
+        infantiles
       }
     });
   };
