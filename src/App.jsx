@@ -14,6 +14,7 @@ import SobreNosotros from './pages/SobreNosotros';
 import Artistas from './pages/Artistas';
 import Novedades from './pages/Novedades';
 import AdminProductos from './pages/AdminProductos';
+import PagoFacil from './pages/PagoFacil';
 
 function App() {
   const [paginaActual, setPaginaActual] = useState('home');
@@ -33,7 +34,11 @@ function App() {
       case 'artistas':
         return <Artistas />;
       case 'carrito':
-        return <Carrito />;
+        return (
+          <Carrito
+            setPaginaActual={setPaginaActual}
+          />
+        );
       case 'sobrenosotros':
         return <SobreNosotros />;
       case 'novedades':
@@ -44,6 +49,12 @@ function App() {
             onSalir={() => setPaginaActual('home')}
           />
         );
+      case 'pagofacil':
+        return (
+          <PagoFacil
+          setPaginaActual={setPaginaActual}
+        />
+    );
       default:
         return <Home />;
     }
