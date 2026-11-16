@@ -1,5 +1,6 @@
 import { createContext, useContext, useReducer } from 'react';
 import { carritoReducer, estadoInicialCarrito } from '../reducers/carritoReducer';
+import {validarInscripcionCurso} from '../utils/validacionesCursos';
 import { AFORO_GALERIA, calcularEntradas, calcularReservaGrupal } from '../config/tarifasVisitas';
 
 const CarritoContext = createContext(null);
@@ -94,20 +95,22 @@ export function CarritoProvider({ children }) {
 
   //Control Cursos 
   const agregarCurso = curso => {
-    const id = curso.referenciaId ?? curso.id;
+    validarInscripcionCurso(curso);
+  
+  const id = curso.id;
+  const precio = curso.precioUnitario ?? curso.precio;
 
     if (
       id == null ||
       !curso.sesionId ||
-      !esPrecioValido(curso.precioUnitario ?? curso.precio) ||
+      !esPrecioValido(precio) ||
       !esEnteroPositivo(curso.cupos)
     ) {
       throw new Error(
         'El curso requiere precio, sesión y cupos válidos.'
       );
     }
-
-    const precio = curso.precioUnitario ?? curso.precio;
+    
     const clave = `curso:${id}:${curso.sesionId}`;
     const existente = buscarItem(clave);
     const cantidad = (existente?.cantidad ?? 0) + 1;
