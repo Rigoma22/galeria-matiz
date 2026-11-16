@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import productoRoutes from './routes/productoRoutes.js';
+import pagoRoutes from './routes/pagoRoutes.js';
 
 import conectarDB from './config/database.js';
 
@@ -20,6 +21,7 @@ app.use(express.json());
 
 // Rutas de productos
 app.use('/api/productos', productoRoutes);
+app.use('/api/pagos', pagoRoutes);
 
 // Primera ruta de prueba
 app.get('/api/health', (req, res) => {

@@ -1,0 +1,48 @@
+.pagofacil {
+    --pagofacil-verde: #167d52;
+    --pagofacil-verde-oscuro: #105c3d;
+}
+
+.pagofacil-card {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.pagofacil-header {
+    background: var(--pagofacil-verde);
+    color: #ffffff;
+    padding: 24px;
+    border: none;
+}
+
+.pagofacil-total {
+    color: var(--pagofacil-verde);
+    font-weight: 700;
+}
+
+.pagofacil-confirmar {
+    background: var(--pagofacil-verde);
+    border-color: var(--pagofacil-verde);
+}
+
+.pagofacil-confirmar:hover,
+.pagofacil-confirmar:focus {
+    background: var(--pagofacil-verde-oscuro);
+    border-color: var(--pagofacil-verde-oscuro);
+}
+
+.pagofacil .form-control:focus,
+.pagofacil .form-select:focus {
+    border-color: var(--pagofacil-verde);
+    box-shadow: 0 0 0 0.2rem rgba(22, 125, 82, 0.15);
+}
+
+@media (max-width: 576px) {
+    .pagofacil-header {
+        padding: 18px;
+    }
+
+    .pagofacil-card .card-body {
+        padding: 16px;
+    }
+}
