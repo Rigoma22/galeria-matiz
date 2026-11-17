@@ -9,6 +9,8 @@ import { Navbar, Nav, Container, Form, Button, Badge, NavDropdown, InputGroup } 
 import { useCarrito } from '../context/CarritoContext';
 // importación para el acceso a la administración del sitio
 import AdminLogin from './AdminLogin';
+// importación para el manejo de accesibilidad
+import { useAccesibilidad } from '../context/AccesibilidadContext';
 
 function CustomNavbar({paginaActual, setPaginaActual}) {
     const [busqueda, setBusqueda] = React.useState('');
@@ -23,6 +25,8 @@ function CustomNavbar({paginaActual, setPaginaActual}) {
         if(!busqueda.trim()) return;
         //Pendiente Código Sistema de Búsqueda
     };
+
+    const { altoContraste, alternarContraste } = useAccesibilidad();
 
     return (
         //Regla W3C: usamos la etiqueta semantica <header>
@@ -56,6 +60,29 @@ function CustomNavbar({paginaActual, setPaginaActual}) {
                         </Button>
                         </InputGroup>
                     </Form>
+
+                    {/* Botón de alternar alto contraste */}
+                    <Button
+                    variant="link"
+                    className="text-decoration-none p-2"
+                    onClick={alternarContraste}
+                    aria-label={
+                        altoContraste
+                        ? 'Desactivar modo de alto contraste'
+                        : 'Activar modo de alto contraste'
+                    }
+                    aria-pressed={altoContraste}
+                    title={
+                        altoContraste
+                        ? 'Desactivar alto contraste'
+                        : 'Activar alto contraste'
+                    }
+                    >
+                    <span aria-hidden="true" style={{ fontSize: '1.4rem' }}>
+                        ◐
+                    </span>
+                    </Button>
+
                     {/* Acceso al panel administrativo */}
                     <Button
                     variant="light"
