@@ -15,6 +15,7 @@ import Artistas from './pages/Artistas';
 import Novedades from './pages/Novedades';
 import AdminProductos from './pages/AdminProductos';
 import PagoFacil from './pages/PagoFacil';
+import Salas from './pages/Salas';
 
 function App() {
   const [paginaActual, setPaginaActual] = useState('home');
@@ -39,6 +40,10 @@ function App() {
             setPaginaActual={setPaginaActual}
           />
         );
+      case 'sobrenosotros':
+        return <SobreNosotros />;
+      case 'salas':
+        return <Salas setPaginaActual={setPaginaActual} />;
       case 'sobrenosotros':
         return <SobreNosotros />;
       case 'novedades':
