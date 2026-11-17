@@ -1,0 +1,114 @@
+/* Alto contraste: Galería MATIZ */
+
+html.alto-contraste {
+  color-scheme: dark;
+
+  --bs-body-bg: #000000;
+  --bs-body-color: #ffffff;
+  --bs-primary: #ffff00;
+  --bs-primary-rgb: 255, 255, 0;
+  --bs-secondary-color: #ffffff;
+  --bs-tertiary-bg: #000000;
+  --bs-border-color: #ffff00;
+}
+
+html.alto-contraste body,
+html.alto-contraste #root {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Contenedores y navegación */
+html.alto-contraste .card,
+html.alto-contraste .modal-content,
+html.alto-contraste .navbar,
+html.alto-contraste footer,
+html.alto-contraste .dropdown-menu,
+html.alto-contraste .alert {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #ffff00 !important;
+}
+
+/* Textos */
+html.alto-contraste .text-muted,
+html.alto-contraste .text-secondary,
+html.alto-contraste .card-text,
+html.alto-contraste .form-label {
+  color: #ffffff !important;
+}
+
+/* Enlaces */
+html.alto-contraste a:not(.btn) {
+  color: #ffff00 !important;
+}
+
+/* Botones principales */
+html.alto-contraste .btn-primary,
+html.alto-contraste .btn-success {
+  background: #ffff00 !important;
+  color: #000000 !important;
+  border-color: #ffff00 !important;
+}
+
+/* Botones secundarios */
+html.alto-contraste .btn-outline-primary,
+html.alto-contraste .btn-outline-secondary {
+  background: #000000 !important;
+  color: #ffff00 !important;
+  border-color: #ffff00 !important;
+}
+
+/* Etiquetas */
+html.alto-contraste .badge.bg-primary,
+html.alto-contraste .badge.bg-success {
+  background: #ffff00 !important;
+  color: #000000 !important;
+}
+
+/* Formularios */
+html.alto-contraste .form-control,
+html.alto-contraste .form-select,
+html.alto-contraste textarea {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffff00 !important;
+}
+
+html.alto-contraste input::placeholder,
+html.alto-contraste textarea::placeholder {
+  color: #dddddd !important;
+  opacity: 1;
+}
+
+/* Indicador visible para navegación con teclado */
+html.alto-contraste :focus-visible {
+  outline: 3px solid #ffff00 !important;
+  outline-offset: 3px;
+}
+
+/* Paginación */
+html.alto-contraste .page-link {
+  background: #000000 !important;
+  color: #ffff00 !important;
+  border-color: #ffff00 !important;
+}
+
+html.alto-contraste .page-item.active .page-link {
+  background: #ffff00 !important;
+  color: #000000 !important;
+}
+
+/* PagoFacil */
+html.alto-contraste .pagofacil-header,
+html.alto-contraste .pagofacil-card {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #ffff00 !important;
+}
+
+html.alto-contraste .pagofacil-confirmar {
+  background: #ffff00 !important;
+  color: #000000 !important;
+  border-color: #ffff00 !important;
+}
