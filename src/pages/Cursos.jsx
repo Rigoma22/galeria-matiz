@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { obtenerCursoPorId, obtenerCursos } from "../services/cursoService";
-import { validarInscripcionCurso, obtenerEstadoInscripcion } from "../utils/validacionesCursos";
+import {
+  validarInscripcionCurso,
+  obtenerEstadoInscripcion,
+} from "../utils/validacionesCursos";
 import { Modal, Button, Alert } from "react-bootstrap";
 import { useCarrito } from "../context/CarritoContext";
 
@@ -16,52 +19,78 @@ function Curso({
   verDetalle,
   nivel,
   fechaInicio,
-  inscribir
+  inscribir,
+  horarios,
 }) {
-
   const estadoInscripcion = obtenerEstadoInscripcion(curso);
 
   return (
-    <div className="card w-100 h-100">
+    <div className="card w-100 h-100 shadow">
       <img
         src={imagen}
         className="card-img-top"
         style={{ height: "100px", objectFit: "cover" }}
         alt={descripcionImagen}
       />
-      <div className="card-body d-flex flex-column gap-0">
-        <h6 className="card-title fw-bold">{nombre}</h6>
+      <div className="card-body d-flex flex-column gap-0 h-100">
         <div className="d-flex flex-row gap-2">
           <span className="badge bg-primary align-self-start mb-1">{tipo}</span>
           <span className="badge bg-secondary align-self-start mb-1">
             {nivel}
           </span>
         </div>
-        <p className="card-text mb-0 mt-auto">
-          <strong>Duración:</strong> {duracion} horas
-        </p>
-        <p className="card-text mb-0 mt-auto">
-          <strong>Fecha inicio:</strong> {fechaInicio}
-        </p>
-        <p className="card-text mb-1 mt-auto">
-          <strong>Docente:</strong> {docente}
-        </p>
-        <div className="mt-auto d-flex gap-2">
-          <button
-            className="btn btn-outline-primary flex-fill box-shadow"
-            onClick={() => verDetalle(id)}
-          >
-            Detalles
-          </button>
-          <button 
-            type="button" 
-            className="btn btn-primary flex-fill box-shadow"
-            disabled={!estadoInscripcion.disponible}
-            title={estadoInscripcion.mensaje}
-            onClick={() => inscribir(curso)}
-          >
-            {estadoInscripcion.disponible? 'Inscribirse' : 'Inscripciones cerradas'}
-          </button>
+        <div className="flex-grow-1 d-flex align-items-center">
+          <h5 className="card-title fw-bold">{nombre}</h5>
+        </div>
+
+        <div className="mt-auto">
+          <div className="d-flex flex-column ">
+            <p className="card-text mb-0 mt-auto">
+              <strong>Duración:</strong> {duracion} horas
+            </p>
+            <p className="card-text mb-0 mt-auto">
+              <strong>Fecha inicio:</strong> {fechaInicio}
+            </p>
+            <div className="mb-3 ">
+              <strong>Horarios:</strong>
+              {horarios?.map((horario, index) => {
+                return (
+                  <div key={index} className="mt-1 bg-light rounded p-2">
+                    <p className="mb-0">
+                      <strong>Dias: </strong>
+                      {horario.dias.join(",")}
+                    </p>
+                    <p className="mb-0">
+                      <strong>Hora:</strong> {horario.horaInicio} -{" "}
+                      {horario.horaFin}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+            <p className="card-text mb-1 mt-auto">
+              <strong>Docente:</strong> {docente}
+            </p>
+          </div>
+          <div className="mt-auto d-flex gap-2">
+            <button
+              className="btn btn-outline-primary flex-fill box-shadow"
+              onClick={() => verDetalle(id)}
+            >
+              Detalles
+            </button>
+            <button
+              type="button"
+              className="btn btn-primary flex-fill box-shadow"
+              disabled={!estadoInscripcion.disponible}
+              title={estadoInscripcion.mensaje}
+              onClick={() => inscribir(curso)}
+            >
+              {estadoInscripcion.disponible
+                ? "Inscribirse"
+                : "Inscripciones cerradas"}
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -144,11 +173,10 @@ const Paginacion = ({
 };
 
 function CursoDetalle({ detalleCurso, show, onHide, inscribir }) {
-  
   if (!detalleCurso) {
     return null;
   }
-  
+
   const estadoInscripcion = obtenerEstadoInscripcion(detalleCurso);
 
   return (
@@ -157,63 +185,174 @@ function CursoDetalle({ detalleCurso, show, onHide, inscribir }) {
       onHide={onHide}
       aria-labelledby="contained-modal-title-vcenter"
       centered
+      size="lg"
+      scrollable
     >
-      <Modal.Header closeButton className="py-2">
-        <Modal.Title id="contained-modal-title-vcenter">
+      <Modal.Header closeButton className="border-0 pb-0">
+        <Modal.Title
+          id="contained-modal-title-vcenter"
+          className="fw-bold fs-5"
+        >
           {detalleCurso.nombre}
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
-        <div className="row g-3">
-          <div className="col-12">
-            <img
-              src={detalleCurso.imagen}
-              alt={detalleCurso.descripcionImagen}
-              className="img-fluid rounded w-100"
-              style={{ maxHeight: "250px", objectFit: "cover" }}
-            />
-          </div>
-          <div className="col-12">
-            <span className="badge bg-primary mb-1 g-2 me-1">
-              {detalleCurso.tipo}
-            </span>
-            <span className="badge bg-secondary mb-1 me-1">
+
+      <Modal.Body className="px-3 px-md-4">
+        {/* Imagen */}
+        <div
+          className="position-relative rounded-4 overflow-hidden mb-4"
+          style={{ height: "260px" }}
+        >
+          <img
+            src={detalleCurso.imagen}
+            alt={detalleCurso.descripcionImagen}
+            className="w-100 h-100"
+            style={{ objectFit: "cover" }}
+          />
+
+          <div
+            className="position-absolute bottom-0 start-0 w-100 p-3 p-md-4 text-white"
+            style={{
+              background: "linear-gradient(transparent, rgba(0,0,0,0.85))",
+            }}
+          >
+            <span className="badge bg-primary me-2">{detalleCurso.tipo}</span>
+
+            <span className="badge bg-secondary me-2">
               {detalleCurso.nivel}
             </span>
-            <h5 className="fw-bold">Descripción</h5>
-            <p className="text-muted">{detalleCurso.descripcion}</p>
+
+            <span className="badge bg-info">
+              {detalleCurso.modalidad.charAt(0).toUpperCase() +
+                detalleCurso.modalidad.slice(1)}
+            </span>
           </div>
-          <div className="col-md-6">
-            <p className="mb-1">
-              <strong>Categoría:</strong> {detalleCurso.categoria}
-            </p>
-            <p className="mb-1">
-              <strong>Duración:</strong> {detalleCurso.duracion} horas
-            </p>
-            <p className="mb-1">
-              <strong>Docente:</strong> {detalleCurso.docente}
-            </p>
+        </div>
+
+        {/* Sobre este curso */}
+        <div className="border rounded-3 p-3 mb-4">
+          <h5 className="fw-bold mb-2">
+            <i className="bi bi-book me-2 text-primary"></i>
+            Sobre este curso
+          </h5>
+
+          <p className="text-secondary mb-0">{detalleCurso.descripcion}</p>
+        </div>
+
+        {/* Información general */}
+        <div className="mb-4 p-3 border rounded-3">
+          <h5 className="fw-bold mb-3">
+            <i className="bi bi-info-circle me-2 text-primary"></i>
+            Información general
+          </h5>
+
+          <div className="row g-4">
+            <div className="col-md-6">
+              <strong>Docente:</strong>
+              <p className="text-muted mb-0">{detalleCurso.docente}</p>
+            </div>
+
+            <div className="col-md-6">
+              <strong>Categoría:</strong>
+              <p className="text-muted mb-0">{detalleCurso.categoria}</p>
+            </div>
+
+            <div className="col-md-6">
+              <strong>Duración:</strong>
+              <p className="text-muted mb-0">{detalleCurso.duracion} horas</p>
+            </div>
+
+            <div className="col-md-6">
+              <strong>Edad mínima:</strong>
+              <p className="text-muted mb-0">{detalleCurso.edadMinima} años</p>
+            </div>
           </div>
-          <div className="col-md-6">
-            <p className="mb-1">
-              <strong>Modalidad:</strong> {detalleCurso.modalidad}
-            </p>
-            <p className="mb-1">
-              <strong>Precio:</strong> ${detalleCurso.precio}
-            </p>
+        </div>
+
+        {/* Fechas del curso */}
+        <div className="mb-4 p-3 border rounded-3">
+          <h5 className="fw-bold border-bottom pb-2">
+            <i className="bi bi-calendar2-week text-primary me-2"></i>
+            Fechas del curso
+          </h5>
+
+          <div className="row g-3">
+            <div className="col-md-6">
+              <strong>Fecha de inicio:</strong>
+              <p className="text-muted mb-0">{detalleCurso.fechaInicio}</p>
+            </div>
+
+            <div className="col-md-6">
+              <strong>Fecha de finalización:</strong>
+              <p className="text-muted mb-0">{detalleCurso.fechaFin}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Horarios disponibles */}
+        <div className="mb-4 p-3 border rounded-3">
+          <h5 className="fw-bold border-bottom pb-2">
+            <i className="bi bi-hourglass text-primary me-2"></i>
+            Horarios disponibles
+          </h5>
+
+          {detalleCurso.horarios.map((horario, index) => (
+            <div key={index} className="card border-0 bg-light mb-2">
+              <div className="card-body py-2">
+                <p className="mb-1">
+                  <strong>Días:</strong> {horario.dias.join(", ")}
+                </p>
+
+                <p className="mb-0">
+                  <strong>Horario:</strong> {horario.horaInicio} -{" "}
+                  {horario.horaFin}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Inscripción y costos */}
+        <div className="mb-4 p-3 border rounded-3">
+          <h5 className="fw-bold border-bottom pb-2">
+            <i className="bi bi-pen me-2 text-primary"></i>
+            Inscripción y costos
+          </h5>
+
+          <div className="row g-3">
+            <div className="col-md-6">
+              <strong>Precio:</strong>
+              <p className="text-primary fw-bold fs-5 mb-0">
+                ${Number(detalleCurso.precio).toLocaleString("es-CO")}
+              </p>
+            </div>
+
+            <div className="col-md-6">
+              <strong>Cupos disponibles:</strong>
+              <p className="text-muted mb-0">{detalleCurso.cupos}</p>
+            </div>
           </div>
         </div>
       </Modal.Body>
-      <Modal.Footer className="py-1">
+
+      <Modal.Footer className="py-2">
         <Button onClick={onHide}>Cerrar</Button>
-        <Button 
-          variant="primary" 
+
+        <Button
+          variant="primary"
           disabled={!estadoInscripcion.disponible}
           title={estadoInscripcion.mensaje}
-          onClick={() => {const agregado = inscribir(detalleCurso); 
-            if (agregado) {onHide();}
+          onClick={() => {
+            const agregado = inscribir(detalleCurso);
+
+            if (agregado) {
+              onHide();
+            }
           }}
-        >{estadoInscripcion.disponible ? 'Inscribirse' : 'Inscripciones cerradas'}
+        >
+          {estadoInscripcion.disponible
+            ? "Inscribirse"
+            : "Inscripciones cerradas"}
         </Button>
       </Modal.Footer>
     </Modal>
@@ -228,16 +367,18 @@ export default function Cursos() {
 
   //Conexión con el carrito
   const { agregarCurso } = useCarrito();
-  const [mensajeCarrito, setMensajeCarrito] = useState('');
-  const [errorCarrito, setErrorCarrito] = useState('');
-  const inscribirCurso = curso => {
-    setMensajeCarrito('');
-    setErrorCarrito('');
+  const [mensajeCarrito, setMensajeCarrito] = useState("");
+  const [errorCarrito, setErrorCarrito] = useState("");
+  const inscribirCurso = (curso) => {
+    setMensajeCarrito("");
+    setErrorCarrito("");
     try {
       validarInscripcionCurso(curso);
       agregarCurso(curso);
-    
-      setMensajeCarrito(`"${curso.nombre}" se agregó correctamente al carrito.`);
+
+      setMensajeCarrito(
+        `"${curso.nombre}" se agregó correctamente al carrito.`,
+      );
 
       return true;
     } catch (error) {
@@ -252,6 +393,10 @@ export default function Cursos() {
   const [filtroDuracion, setFiltroDuracion] = useState("Todos");
   const [filtroModalidad, setFiltroModalidad] = useState([]);
   const [filtroNivel, setFiltroNivel] = useState([]);
+  const [filtroFecha, setFiltroFecha] = useState("");
+  const [filtroCupos, setFiltroCupos] = useState("Todos");
+  const [filtroEdad, setFiltroEdad] = useState("Todos");
+  const [filtroPrecio, setFiltroPrecio] = useState("Todos");
 
   // Paginación
   const [paginaActual, setPaginaActual] = useState(1);
@@ -352,17 +497,50 @@ export default function Cursos() {
             .replace(/[\u0300-\u036f]/g, ""),
         );
 
+      const fechaCoincide =
+        filtroFecha === "" ||
+        String(curso.fechaInicio).slice(0, 10) >= filtroFecha;
+
+      const cuposCoinciden =
+        filtroCupos === "Todos" ||
+        (filtroCupos === "disponibles" && Number(curso.cupos) > 0) ||
+        (filtroCupos === "agotados" && Number(curso.cupos) <= 0);
+
+      const edadCoincide =
+        filtroEdad === "Todos" ||
+        (filtroEdad === "12" && Number(curso.edadMinima) <= 12) ||
+        (filtroEdad === "17" &&
+          Number(curso.edadMinima) >= 13 &&
+          Number(curso.edadMinima) <= 17) ||
+        (filtroEdad === "18" && Number(curso.edadMinima) >= 18);
+
+      const precioCoincide =
+        filtroPrecio === "Todos" ||
+        (filtroPrecio === "50000" && Number(curso.precio) < 50000) ||
+        (filtroPrecio === "100000" &&
+          Number(curso.precio) >= 50000 &&
+          Number(curso.precio) <= 100000) ||
+        (filtroPrecio === "200000" &&
+          Number(curso.precio) > 100000 &&
+          Number(curso.precio) <= 200000) ||
+        (filtroPrecio === "200000+" && Number(curso.precio) > 200000);
+
       return (
         categoriaCoincide &&
         tipoCoincide &&
         duracionCoincide &&
         modalidadCoincide &&
         textoCoincide &&
-        nivelCoincide
+        nivelCoincide &&
+        fechaCoincide &&
+        cuposCoinciden &&
+        edadCoincide &&
+        precioCoincide
       );
     });
 
     setCursosFiltrados(cursosFiltrados);
+    setPaginaActual(1);
   };
 
   const limpiarFiltros = () => {
@@ -372,7 +550,12 @@ export default function Cursos() {
     setFiltroModalidad([]);
     setFiltroNivel([]);
     setValorBusqueda("");
+    setFiltroFecha("");
+    setFiltroCupos("Todos");
+    setFiltroEdad("Todos");
+    setFiltroPrecio("Todos");
     setCursosFiltrados(cursosData);
+    setPaginaActual(1);
   };
 
   const verDetalle = async (id) => {
@@ -421,18 +604,19 @@ export default function Cursos() {
   };
 
   const ordenarLista = (opcion) => {
-    if (opcion == "A-Z") {
-      setCursosFiltrados(
-        [...cursosFiltrados].sort((a, b) => a.nombre.localeCompare(b.nombre)),
-      );
-    }
-    if (opcion == "Z-A") {
-      setCursosFiltrados(
-        [...cursosFiltrados].sort((a, b) => b.nombre.localeCompare(a.nombre)),
-      );
+    setOrdenLista(opcion);
+
+    const cursosOrdenados = [...cursosFiltrados];
+
+    if (opcion === "A-Z") {
+      cursosOrdenados.sort((a, b) => a.nombre.localeCompare(b.nombre));
+    } else if (opcion === "Z-A") {
+      cursosOrdenados.sort((a, b) => b.nombre.localeCompare(a.nombre));
     } else {
-      setCursosFiltrados([...cursosFiltrados].sort((a, b) => b.id - a.id));
+      cursosOrdenados.sort((a, b) => b.id - a.id);
     }
+
+    setCursosFiltrados(cursosOrdenados);
   };
 
   useEffect(() => {
@@ -453,26 +637,29 @@ export default function Cursos() {
 
   return (
     <div className="d-flex flex-column">
-
       {mensajeCarrito && (
         <Alert
           variant="success"
           dismissible
-          onClose={() => setMensajeCarrito('')}
+          onClose={() => setMensajeCarrito("")}
           role="status"
-        > {mensajeCarrito} </Alert>
-        )
-      }
-      
+        >
+          {" "}
+          {mensajeCarrito}{" "}
+        </Alert>
+      )}
+
       {errorCarrito && (
         <Alert
           variant="danger"
           dismissible
-          onClose={() => setErrorCarrito('')}
+          onClose={() => setErrorCarrito("")}
           role="alert"
-        > {errorCarrito} </Alert>
-        )
-      }
+        >
+          {" "}
+          {errorCarrito}{" "}
+        </Alert>
+      )}
 
       {/* Banner Principal */}
       <div className="bg-light position-relative">
@@ -568,6 +755,7 @@ export default function Cursos() {
                           duracion,
                           docente,
                           tipo,
+                          horarios,
                         } = curso;
 
                         return (
@@ -583,6 +771,7 @@ export default function Cursos() {
                               tipo={curso.tipo}
                               nivel={curso.nivel}
                               fechaInicio={curso.fechaInicio}
+                              horarios={horarios}
                               verDetalle={verDetalle}
                               inscribir={inscribirCurso}
                             />
@@ -630,19 +819,23 @@ export default function Cursos() {
             <div className="card border-0 shadow-sm">
               <div className="card-body">
                 <h5 className="card-title mb-4" id="filtros_busqueda">
-                  <i className="bi bi-funnel me-2"></i>
+                  <i className="bi bi-funnel me-2 text-primary"></i>
                   Filtros de búsqueda
                 </h5>
 
                 <div className="mb-4">
                   <label className="form-label fw-semibold">Buscar curso</label>
-                  <input
+                  <div className="input-group">
+                    <span class="input-group-text"><i class="bi bi-search text-primary"></i></span>
+                    <input
                     type="text"
                     className="form-control"
                     placeholder="Nombre del curso..."
                     value={valorEntrada}
                     onChange={(e) => buscarCurso(e.target.value)}
                   />
+                  </div>
+                  
                 </div>
 
                 <div className="mb-4 d-flex flex-column align-items-start">
@@ -712,6 +905,65 @@ export default function Cursos() {
                     />
                   ))}
                 </div>
+                <div className="mb-4">
+                  <label className="form-label fw-semibold">
+                    Fecha de inicio
+                  </label>
+
+                  <input
+                    type="date"
+                    className="form-control"
+                    value={filtroFecha}
+                    onChange={(e) => setFiltroFecha(e.target.value)}
+                  />
+                </div>
+                <div className="mb-4">
+                  <label className="form-label fw-semibold">
+                    Disponibilidad de cupos
+                  </label>
+
+                  <select
+                    className="form-select"
+                    value={filtroCupos}
+                    onChange={(e) => setFiltroCupos(e.target.value)}
+                  >
+                    <option value="Todos">Todos</option>
+                    <option value="disponibles">Con cupos disponibles</option>
+                    <option value="agotados">Sin cupos disponibles</option>
+                  </select>
+                </div>
+
+                <div className="mb-4">
+                  <label className="form-label fw-semibold">Edad mínima</label>
+
+                  <select
+                    className="form-select"
+                    value={filtroEdad}
+                    onChange={(e) => setFiltroEdad(e.target.value)}
+                  >
+                    <option value="Todos">Todas las edades</option>
+                    <option value="12">Hasta 12 años</option>
+                    <option value="17">De 13 a 17 años</option>
+                    <option value="18">18 años o más</option>
+                  </select>
+                </div>
+                <div className="mb-4">
+                  <label className="form-label fw-semibold">
+                    Precio del curso
+                  </label>
+
+                  <select
+                    className="form-select"
+                    value={filtroPrecio}
+                    onChange={(e) => setFiltroPrecio(e.target.value)}
+                  >
+                    <option value="Todos">Todos los precios</option>
+                    <option value="50000">Menos de $50.000</option>
+                    <option value="100000">$50.000 - $100.000</option>
+                    <option value="200000">$100.000 - $200.000</option>
+                    <option value="200000+">Más de $200.000</option>
+                  </select>
+                </div>
 
                 <button
                   className="btn btn-primary w-100 mb-2"
@@ -748,40 +1000,58 @@ export default function Cursos() {
                 <option value={"Z-A"}>Nombre Z-A</option>
               </select>
             </div>
+            {cursosActuales.length > 0 ? (
+              <div className="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3">
+                {cursosActuales.map((curso) => {
+                  const {
+                    id,
+                    nombre,
+                    imagen,
+                    descripcionImagen,
+                    duracion,
+                    docente,
+                    tipo,
+                    nivel,
+                    fechaInicio,
+                    horarios,
+                  } = curso;
+                  return (
+                    <div className="col" key={id}>
+                      <Curso
+                        curso={curso}
+                        id={curso.id}
+                        nombre={curso.nombre}
+                        imagen={curso.imagen}
+                        descripcionImagen={curso.descripcionImagen}
+                        duracion={curso.duracion}
+                        docente={curso.docente}
+                        tipo={curso.tipo}
+                        nivel={curso.nivel}
+                        fechaInicio={curso.fechaInicio}
+                        horarios={curso.horarios}
+                        verDetalle={verDetalle}
+                        inscribir={inscribirCurso}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              <div className="alert alert-info text-center mt-3">
+                <i className="bi bi-search fs-3 d-block mb-2"></i>
+                <h5>No se encontraron cursos</h5>
+                <p className="mb-2">
+                  No hay cursos que coincidan con los filtros seleccionados.
+                </p>
+                <button
+                  className="btn btn-outline-primary"
+                  onClick={limpiarFiltros}
+                >
+                  Limpiar filtros
+                </button>
+              </div>
+            )}
 
-            <div className="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3">
-              {cursosActuales.map((curso) => {
-                const {
-                  id,
-                  nombre,
-                  imagen,
-                  descripcionImagen,
-                  duracion,
-                  docente,
-                  tipo,
-                  nivel,
-                  fechaInicio,
-                } = curso;
-                return (
-                  <div className="col" key={id}>
-                    <Curso
-                      curso={curso}
-                      id={curso.id}
-                      nombre={curso.nombre}
-                      imagen={curso.imagen}
-                      descripcionImagen={curso.descripcionImagen}
-                      duracion={curso.duracion}
-                      docente={curso.docente}
-                      tipo={curso.tipo}
-                      nivel={curso.nivel}
-                      fechaInicio={curso.fechaInicio}
-                      verDetalle={verDetalle}
-                      inscribir={inscribirCurso}
-                    />
-                  </div>
-                );
-              })}
-            </div>
             <Paginacion
               cursosPorPagina={cursosPorPagina}
               totalCursos={cursosFiltrados.length}
