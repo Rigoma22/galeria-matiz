@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "nombre": "Sanyela Rodríguez",
+    "rol": "Desarrolladora",
+    "celular": "+57 304 4237 383",
+    "correo": "sanyela.rodriguez@galeriamatiz.com",
+    "foto": "/assets/sobreNosotros/FotoSanyela.png",
+    "alt": "Foto de Sanyela",
+    "descripcion": "Estudiante de Ingeniería de Sistemas con enfoque en desarrollo web avanzado, calidad de software y diseño de experiencias interactivas. Apasionada por fusionar la tecnología con la gestión artística.",
+    "enfoque": "Diseño de la arquitectura de información, desarrollo en React y Bootstrap, creación de las secciones 'Sobre Nosotros', 'Exposiciones' y la compleja estructura de las 5 plantas de 'Salas' con modales dinámicos y navegación técnica."
+  },
+  {
+    "id": 2,
+    "nombre": "Ricardo Gomez",
+    "rol": "Desarrollador",
+    "celular": "+57 312 8800 618",
+    "correo": "ricardo.gomez@galeriamatiz.com",
+    "foto": "/assets/sobreNosotros/FotoRicardo.png",
+    "alt": "Foto de Ricardo",
+    "descripcion": "Desarrollador enfocado en la estructuración de bases lógicas, flujos de navegación globales y optimización de componentes reutilizables.",
+    "enfoque": "Construcción del componente principal Home, la barra de navegación (CustomNavbar), el pie de página (CustomFooter), el sistema de carrito de compras, la tienda virtual (ArteShop) y la sección 'Visítanos'."
+  },
+  {
+    "id": 3,
+    "nombre": "Yudy Benavides",
+    "rol": "Desarrolladora",
+    "celular": "+57 315 0116 988",
+    "correo": "yudy.benavides@galeriamatiz.com",
+    "foto": "/assets/sobreNosotros/FotoYudy.png",
+    "alt": "Foto de Yudy",
+    "descripcion": "Especialista en la integración de catálogos dinámicos, diseño visual de contenidos educativos y divulgación cultural.",
+    "enfoque": "Diseño e implementación de las secciones 'Cursos y Experiencias', 'Novedades', 'Noticias del Arte', el directorio de 'Artistas' y la exhibición de obras destacadas."
+  }
+]

@@ -204,7 +204,7 @@ function CustomNavbar({paginaActual, setPaginaActual}) {
                                 </NavDropdown.Item>
                                 <NavDropdown.Item
                                     href="#nuestras-salas"
-                                    onClick={() => setPaginaActual('exposiciones')}
+                                    onClick={() => setPaginaActual('salas')}
                                 >
                                     🔑 Nuestras Salas
                                 </NavDropdown.Item>
