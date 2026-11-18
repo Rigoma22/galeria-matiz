@@ -46,6 +46,7 @@ function Artista({
     </Card>
   );
 }
+
 function ObrasArtista({ obrasArtista, show, onHide }) {
   if (!obrasArtista) {
     return null;
@@ -61,7 +62,7 @@ function ObrasArtista({ obrasArtista, show, onHide }) {
             className="img-fluid mx-auto d-block"
             style={{
               aspectRatio: "15 / 6",
-              objectFit: "cover",
+              objectFit: "contain",
               margin: "0 auto",
             }}
           />
@@ -106,12 +107,59 @@ function ObrasArtista({ obrasArtista, show, onHide }) {
     </Modal>
   );
 }
+const Paginacion = ({
+  artistasPorPagina,
+  totalArtistas,
+  paginar,
+  paginaActual = 1,
+}) => {
+  const numeroPaginas = [];
+
+  for (let i = 1; i <= Math.ceil(totalArtistas / artistasPorPagina); i++) {
+    numeroPaginas.push(i);
+  }
+
+  return (
+    <nav
+      aria-label="Paginación"
+      className="d-flex justify-content-center bottom py-3 border-top"
+    >
+      <ul className="pagination pagination-lg">
+        {numeroPaginas.map((numero) => {
+          return (
+            <li
+              className={`page-item  ${paginaActual == numero ? "active" : ""}`}
+              key={numero}
+            >
+              <a
+                className="page-link"
+                href="#!"
+                aria-current="page"
+                onClick={() => paginar(numero)}
+              >
+                {numero}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  );
+};
 
 export default function Artistas() {
   const [artistas, setArtistas] = useState([]);
   const [especialidadActiva, setEspecialidad] = useState("Todas");
   const [detalleObrasArtista, setDetalleObrasArtista] = useState(null);
   const [mostrarObras, setMostrarObras] = useState(false);
+  //Paginacion
+  const [paginaActual, setPaginaActual] = useState(1);
+  const [artistasPorPagina, setArtistasPorPagina] = useState(4);
+
+  const indiceUltimoArtista = paginaActual * artistasPorPagina;
+  const indicePrimerArtista = indiceUltimoArtista - artistasPorPagina;
+
+  const paginar = (numeroPagina) => setPaginaActual(numeroPagina);
 
   useEffect(() => {
     const cargarArtistas = async () => {
@@ -143,18 +191,21 @@ export default function Artistas() {
     setMostrarObras(true);
   };
   return (
-    <Container className="py-4 d-flex justify-content-center">
+    <Container className="py-4 d-flex justify-content-center flex-column">
       <Tab.Container id="left-tabs-example" defaultActiveKey="todas">
         <Row>
           <Col sm={3} className="">
-            <h2 className="border-bottom">Especialidades</h2>
+            <h2 className="border-bottom fs-4">Especialidades</h2>
             <Nav variant="pills" className="flex-column">
               {especialidades.map((especialidad) => {
                 return (
                   <Nav.Item key={especialidad}>
                     <Nav.Link
                       eventKey={normalizar(especialidad)}
-                      onClick={() => setEspecialidad(especialidad)}
+                      onClick={() => {
+                        setEspecialidad(especialidad);
+                        setPaginaActual(1);
+                      }}
                     >
                       <strong>{especialidad}</strong>
                     </Nav.Link>
@@ -165,9 +216,11 @@ export default function Artistas() {
           </Col>
           <Col sm={9}>
             <Tab.Content className="d-flex justify-content-center flex-column">
-              <h2 className="text-center bg-primary text-white rounded">
-                Nuestros artistas
-              </h2>
+              <div className="p-3 mb-4 bg-primary bg-opacity-10 border-start border-primary border-4 rounded-end">
+                <h2 className="fs-4 text-primary fw-bold m-0">
+                  Nuestros artistas
+                </h2>
+              </div>
               {especialidades.map((especialidad) => {
                 return (
                   <Tab.Pane
@@ -197,6 +250,11 @@ export default function Artistas() {
                             normalizar(especialidad),
                           );
                         })
+                        .filter(
+                          (artista, index) =>
+                            index >= indicePrimerArtista &&
+                            index < indiceUltimoArtista,
+                        )
                         .map((artista) => {
                           const {
                             id,
@@ -231,6 +289,30 @@ export default function Artistas() {
                   </Tab.Pane>
                 );
               })}
+              <Paginacion
+                artistasPorPagina={artistasPorPagina}
+                totalArtistas={
+                  artistas.filter((artista) => {
+                    if (especialidadActiva === "Todas") return true;
+
+                    if (especialidadActiva === "Otras técnicas") {
+                      return !especialidades
+                        .filter((e) => !["Todas", "Otras técnicas"].includes(e))
+                        .some((e) =>
+                          normalizar(artista.especialidad).includes(
+                            normalizar(e),
+                          ),
+                        );
+                    }
+
+                    return normalizar(artista.especialidad).includes(
+                      normalizar(especialidadActiva),
+                    );
+                  }).length
+                }
+                paginar={paginar}
+                paginaActual={paginaActual}
+              />
             </Tab.Content>
           </Col>
         </Row>

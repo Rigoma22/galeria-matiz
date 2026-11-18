@@ -1,5 +1,5 @@
 import { Container, Card, Button, Row, Col } from "react-bootstrap";
-import { obtenerNovedades } from "../services/novedadService";
+import { obtenerNovedades,actualizarNovedades } from "../services/novedadService";
 import { useState, useEffect } from "react";
 
 function Novedad({
@@ -13,7 +13,7 @@ function Novedad({
 }) {
   return (
     <Container className="my-3">
-      <Card className="shadow-sm">
+      <Card className="shadow">
         <Card.Body>
           <Row className="align-items-center">
             <Col md={8}>
@@ -61,8 +61,18 @@ export default function Novedades() {
   }, []);
 
   return (
-    <div className="d-flex justify-content-center flex-column">
-      <h3 className="align-self-center">Noticias</h3>
+    <div className="d-flex justify-content-center flex-column ">
+      <div className="d-flex flex-row justify-content-between align-items-center">
+        <h1 className="display-5 fw-bold text-dark mb-3 mb-md-0 ">Noticias</h1>
+        <Button
+          className="btn btn-outline-primary box-shadow text-white"
+          onClick={()=>{actualizarNovedades()}}
+        >
+          <i class="bi bi-arrow-clockwise me-3"></i>
+          <strong>Actualizar</strong>
+        </Button>
+      </div> 
+
       {novedades.map((novedad) => {
         const { id, titulo, fecha, categoria, descripcion, imagen, fuente } =
           novedad;

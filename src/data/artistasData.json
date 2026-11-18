@@ -521,32 +521,32 @@
     },
     {
         "id": 19,
-        "nombre": "Ricardo Mendoza",
-        "especialidad": "Escultura en madera",
+        "nombre": "Diego Ferro",
+        "especialidad": "Escultura en metal",
         "imagen": "../../public/assets/artistas/mat-art-19.svg",
-        "imagenArtista": "../../public/assets/artistas/mat-art-foto-19.jpg",
+        "imagenArtista": "../../public/assets/artistas/mat-art-foto-19.svg",
         "imagenDescripcion": "",
-        "presentacion": "Soy Ricardo Mendoza, escultor especializado en madera. Disfruto trabajar con materiales naturales y aprovechar sus texturas y formas originales. Cada escultura representa para mí un diálogo entre la naturaleza, la creatividad y el trabajo artesanal.",
+        "presentacion": "Soy Diego Ferro, escultor especializado en metal. Disfruto trabajar con materiales metálicos y explorar sus posibilidades mediante técnicas de soldadura, fundición y modelado. Cada escultura representa para mí un diálogo entre la creatividad, la resistencia y la transformación del material.",
         "obras": [
             {
-                "nombre": "Espiral de Cedro",
+                "nombre": "Espiral de Acero",
                 "imagenObra": "../../public/assets/obras/mat-art-19-obra-1.jpg",
-                "imagenObraDescripcion": "Escultura tallada en una sola pieza de madera de cedro siguiendo sus vetas naturales.",
-                "descripcion": "Talla sustractiva con gubias y escofinas en tronco macizo de cedro rojo (95 x 35 x 30 cm). Acabado con cera de abeja natural pulida.",
+                "imagenObraDescripcion": "Escultura metálica en forma de espiral elaborada en acero inoxidable con un acabado pulido que resalta sus curvas.",
+                "descripcion": "Estructura elaborada mediante corte, curvado y soldadura de acero inoxidable (95 x 35 x 30 cm). Acabado pulido para conseguir una superficie brillante y uniforme.",
                 "fechaCreacion": "2022-08-21"
             },
             {
-                "nombre": "Vuelo Tallado",
+                "nombre": "Vuelo Metálico",
                 "imagenObra": "../../public/assets/obras/mat-art-19-obra-2.jpg",
-                "imagenObraDescripcion": "Figura estilizada de un ave en pleno vuelo pulida con aceites naturales.",
-                "descripcion": "Madera de nogal americano tallada y lijada hasta grano 600 (50 x 75 x 40 cm), tratada con aceite de tung polimerizado.",
+                "imagenObraDescripcion": "Figura estilizada de un ave en pleno vuelo elaborada en metal, con alas extendidas y detalles cuidadosamente moldeados.",
+                "descripcion": "Escultura realizada en aluminio mediante técnicas de corte, moldeado y soldadura (50 x 75 x 40 cm), con acabado satinado y protección anticorrosiva.",
                 "fechaCreacion": "2023-12-09"
             },
             {
                 "nombre": "Nudo del Tiempo",
                 "imagenObra": "../../public/assets/obras/mat-art-19-obra-3.jpg",
-                "imagenObraDescripcion": "Tronco recuperado de roble transformado en una pieza abstracta de curvas suaves.",
-                "descripcion": "Madera recuperada de roble blanco vaciada internamente con fresa rotativa y estabilizada con resina (70 x 50 x 45 cm).",
+                "imagenObraDescripcion": "Escultura abstracta elaborada en acero con formas entrelazadas y curvas que representan el paso del tiempo.",
+                "descripcion": "Pieza abstracta fabricada en acero al carbono mediante forjado, curvado y soldadura (70 x 50 x 45 cm). Acabado con pátina oscura y sellado protector.",
                 "fechaCreacion": "2024-07-14"
             }
         ]
