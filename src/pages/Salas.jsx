@@ -450,7 +450,7 @@ const pisosData = [
                 className="btn btn-outline-primary px-2 py-1 rounded-pill fw-bold shadow-sm d-inline-flex align-items-center gap-1 align-self-start"
                 style={{ fontSize: '0.8rem' }}
               >
-                <i className="bi bi-map"></i> Ver plano de este piso
+                <i className="bi bi-map"></i> Ver Mapa de este piso
               </button>
             </div>
             
